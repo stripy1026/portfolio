@@ -1,19 +1,18 @@
 import { NavBar } from "@/components/NavBar";
+import { Intro } from "@/components/Intro";
+import { About } from "@/components/About";
 
 export default function Page() {
   return (
     <main>
-      <NavBar />
-      <section className="mt-10">
-        <div className="py-96 bg-green-500"></div>
-        <h1 id="hello" className="pt-10">
-          <span>안녕, NextJS!</span>
-        </h1>
-        <div className="py-96 bg-green-500"></div>
-        <h2 id="push" className="pt-10">
-          <span>푸쉬 테스트</span>
-        </h2>
-        <div className="py-96 bg-green-500"></div>
+      <section>
+        <NavBar />
+      </section>
+      <section className="w-full h-screen my-5 bg-slate-500">
+        <Intro />
+      </section>
+      <section id="about" className="w-full h-screen my-5 bg-slate-500">
+        <About />
       </section>
     </main>
   );
