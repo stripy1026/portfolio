@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -5,8 +7,8 @@ import {
   faBook,
   faGraduationCap,
   faHeartCirclePlus,
+  faBoltLightning,
 } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
 
 export const About = () => {
   return (
@@ -25,6 +27,7 @@ export const About = () => {
         <span>인하대학교 물리학과</span>
       </div>
       <div>
+        <FontAwesomeIcon icon={faBoltLightning} />
         <span>강점</span>
         <div>
           <FontAwesomeIcon icon={faBook} />
@@ -35,7 +38,6 @@ export const About = () => {
           <span>상대방을 존중, 무한한 이해심</span>
         </div>
       </div>
-      <div>기술 스택</div>
       <div className="flex">
         <Image src="C.svg" alt="C" width={96} height={96} />
         <Image src="C++.svg" alt="C++" width={96} height={96} />
@@ -52,7 +54,28 @@ export const About = () => {
           height={96}
         />
       </div>
-      <div>comments</div>
+      <div>
+        <p>
+          <a
+            target="_blank"
+            href="https://42seoul.kr/seoul42/main/view"
+            rel="noreferrer"
+            className="no-underline hover:underline font-bold text-amber-300"
+          >
+            42서울
+          </a>
+          에서 2년동안 C와 C++을 학습했습니다. 물리학을 공부하던 입장에서는,
+          바로 실용적인 기술들을 공부하기보다는 C를 통해 컴퓨터 구조에 대해 보다
+          근본적으로 파악할 수 있어 매우 재미있었습니다.
+        </p>
+        <p>
+          42서울에서 여러 과제들을 풀며 얻은 기본적인 CS 지식을 통해, 기본기를
+          튼튼하게 다진 뒤 웹 프론트엔드를 구현하기 위한 기술들을 쌓았습니다.
+          결과물이 바로 눈에 보인다는 것이 가장 큰 재미와 성취감으로 다가와서,
+          웹 프론트엔드로 진로를 결심했습니다. React Native 로 핸드폰
+          어플리케이션을 개발하는 것도 비슷한 이유로 매우 재미있었습니다.
+        </p>
+      </div>
     </main>
   );
 };
