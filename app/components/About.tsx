@@ -14,31 +14,41 @@ export const About = () => {
   return (
     <main>
       <span>소개 페이지</span>
-      <div>
-        <FontAwesomeIcon icon={faUser} />
-        <span>조인우</span>
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faCalendar} />
-        <span>1995.10.26</span>
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faGraduationCap} />
-        <span>인하대학교 물리학과</span>
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faBoltLightning} />
-        <span>강점</span>
-        <div>
-          <FontAwesomeIcon icon={faBook} />
-          <span>배움의 즐거움, 무한한 호기심</span>
+      <section>
+        <div className="flex">
+          <div>
+            <FontAwesomeIcon icon={faUser} />
+            <span>조인우</span>
+          </div>
+          <div className="flex-col">
+            <div>
+              <FontAwesomeIcon icon={faCalendar} />
+              <span>1995.10.26</span>
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faGraduationCap} />
+              <span>인하대학교 물리학과</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <FontAwesomeIcon icon={faHeartCirclePlus} />
-          <span>상대방을 존중, 무한한 이해심</span>
+        <div className="flex">
+          <div>
+            <FontAwesomeIcon icon={faBoltLightning} />
+            <span>강점</span>
+          </div>
+          <div className="flex-col">
+            <div>
+              <FontAwesomeIcon icon={faBook} />
+              <span>배움의 즐거움, 무한한 호기심</span>
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faHeartCirclePlus} />
+              <span>상대방을 존중, 무한한 이해심</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="flex">
+      </section>
+      <section className="flex">
         <Image src="C.svg" alt="C" width={96} height={96} />
         <Image src="C++.svg" alt="C++" width={96} height={96} />
         <Image src="html.svg" alt="html" width={96} height={96} />
@@ -53,8 +63,8 @@ export const About = () => {
           width={96}
           height={96}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <p>
           <a
             target="_blank"
@@ -75,7 +85,7 @@ export const About = () => {
           웹 프론트엔드로 진로를 결심했습니다. React Native 로 핸드폰
           어플리케이션을 개발하는 것도 비슷한 이유로 매우 재미있었습니다.
         </p>
-      </div>
+      </section>
     </main>
   );
 };
