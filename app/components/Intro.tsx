@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { BackgroundAnimation } from "./BackgroundAnimation";
 
 export const Intro = () => {
   return (
     <main>
+      <BackgroundAnimation />
       <section>
         <div>
           <p>저는 아무것도 모릅니다</p>
