@@ -1,10 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import { BackgroundAnimation } from "./BackgroundAnimation";
+import { useRef } from "react";
+import { useClientWidthHeight } from "@/hooks/useClientWidthHeight";
 
 export const Intro = () => {
+  const mainRef = useRef<HTMLElement>(null);
+  const { width, height } = useClientWidthHeight(mainRef);
+
   return (
-    <main>
-      <BackgroundAnimation />
+    <main className="w-full h-screen my-5 bg-slate-500" ref={mainRef}>
+      <BackgroundAnimation width={width} height={height} />
       <section>
         <div>
           <p>저는 아무것도 모릅니다</p>

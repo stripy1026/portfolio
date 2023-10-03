@@ -10,7 +10,7 @@ export default function Page() {
       <section>
         <NavBar />
       </section>
-      <section className="w-full h-screen my-5 bg-slate-500">
+      <section>
         <Intro />
       </section>
       <section id="about" className="w-full h-screen my-5 bg-slate-500">

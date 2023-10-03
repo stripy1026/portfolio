@@ -1,14 +1,15 @@
-"use client";
+import { useCanvas } from "@/hooks/useCanvas";
 
-import { useEffect, useRef } from "react";
+type BackgroundAnimationProps = {
+  width: number;
+  height: number;
+};
 
-export const BackgroundAnimation = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
-  }, []);
+export const BackgroundAnimation = ({
+  width,
+  height,
+}: BackgroundAnimationProps) => {
+  const canvasRef = useCanvas(width, height);
 
   return <canvas ref={canvasRef} />;
 };
