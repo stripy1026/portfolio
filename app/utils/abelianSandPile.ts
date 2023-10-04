@@ -33,11 +33,15 @@ export class AbelianSandpile implements IAbelianSandpile {
     this.randomX = Math.floor((Math.random() * this.WIDTH) / 10);
     this.randomY = Math.floor((Math.random() * this.HEIGHT) / 10);
     this.sandbox[this.randomX][this.randomY] += 1;
-    console.log(this.sandbox);
+
     ctx.fillStyle = `rgb(${this.sandbox[this.randomX][this.randomY] * 50}, ${
       this.sandbox[this.randomX][this.randomY] * 50
     }, ${this.sandbox[this.randomX][this.randomY] * 50})`;
     ctx.fillRect(this.randomX * 10, this.randomY * 10, 10, 10);
+
+    if (this.sandbox[this.randomX][this.randomY] > 3) {
+      this.unstableList.push([this.randomX, this.randomY]);
+    }
   }
 
   makeAvalanche() {}
