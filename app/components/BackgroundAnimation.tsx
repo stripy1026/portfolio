@@ -10,11 +10,11 @@ export const BackgroundAnimation = ({
   width,
   height,
 }: BackgroundAnimationProps) => {
-  const tmp: IAbelianSandpile = new AbelianSandpile();
+  const sandpile: IAbelianSandpile = new AbelianSandpile(width, height);
 
   const animate = (ctx: CanvasRenderingContext2D) => {
-    ctx.clearRect(0, 0, width, height);
-    tmp.animate(ctx);
+    // ctx.clearRect(0, 0, width, height);
+    sandpile.animate(ctx);
   };
   const canvasRef = useCanvas(width, height, animate);
 
