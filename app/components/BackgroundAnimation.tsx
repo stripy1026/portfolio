@@ -1,5 +1,5 @@
 import { useCanvas } from "@/hooks/useCanvas";
-import { abelianSandPile } from "@/utils/abelianSandPile";
+import { AbelianSandpile, IAbelianSandpile } from "@/utils/AbelianSandpile";
 
 type BackgroundAnimationProps = {
   width: number;
@@ -10,10 +10,13 @@ export const BackgroundAnimation = ({
   width,
   height,
 }: BackgroundAnimationProps) => {
-  const draw = (ctx: CanvasRenderingContext2D) => {
-    ctx = abelianSandPile(ctx, width, height);
+  const tmp: IAbelianSandpile = new AbelianSandpile();
+
+  const animate = (ctx: CanvasRenderingContext2D) => {
+    ctx.clearRect(0, 0, width, height);
+    tmp.animate(ctx);
   };
-  const canvasRef = useCanvas(width, height, draw);
+  const canvasRef = useCanvas(width, height, animate);
 
   return <canvas ref={canvasRef} />;
 };
