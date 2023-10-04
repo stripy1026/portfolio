@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 export const useCanvas = (
   canvasWidth: number,
   canvasHeight: number,
-  animate: (ctx: CanvasRenderingContext2D) => void
+  draw: (ctx: CanvasRenderingContext2D) => void
 ) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -25,9 +25,9 @@ export const useCanvas = (
     setCanvas();
 
     if (ctx) {
-      animate(ctx);
+      draw(ctx);
     }
-  }, [canvasWidth, canvasHeight, animate]);
+  }, [canvasWidth, canvasHeight, draw]);
 
   return canvasRef;
 };
