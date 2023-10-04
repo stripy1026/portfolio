@@ -33,6 +33,7 @@ export class AbelianSandpile implements IAbelianSandpile {
     posY: number,
     level: number
   ) {
+    if (!ctx) return;
     ctx.fillStyle = `rgb(${level * 50}, ${level * 50}, ${level * 50})`;
     ctx.fillRect(posX * 10, posY * 10, 10, 10);
   }
@@ -44,6 +45,11 @@ export class AbelianSandpile implements IAbelianSandpile {
   topple(ctx: CanvasRenderingContext2D) {
     this.randomX = Math.floor((Math.random() * this.WIDTH) / 10);
     this.randomY = Math.floor((Math.random() * this.HEIGHT) / 10);
+
+    if (!this.sandbox[this.randomX]) {
+      return;
+    }
+
     this.sandbox[this.randomX][this.randomY] += 1;
 
     this.drawLevel(
