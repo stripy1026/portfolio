@@ -14,7 +14,7 @@ export const BackgroundAnimation = ({
 
   const animate = (ctx: CanvasRenderingContext2D) => {
     // ctx.clearRect(0, 0, width, height);
-    sandpile.animate(ctx);
+    sandpile.topple(ctx);
   };
   const canvasRef = useCanvas(width, height, animate);
 
