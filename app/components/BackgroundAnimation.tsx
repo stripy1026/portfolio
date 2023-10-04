@@ -10,11 +10,14 @@ export const BackgroundAnimation = ({
   height,
 }: BackgroundAnimationProps) => {
   const draw = (ctx: CanvasRenderingContext2D) => {
-    ctx.fillStyle = "rgb(200, 0, 0)";
-    ctx.fillRect(10, 10, 50, 50);
-
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(30, 30, 50, 50);
+    for (let i = 0; i < width; ++i) {
+      for (let j = 0; j < height; ++j) {
+        ctx.fillStyle = `rgb(${Math.floor((i * 256) / width)}, ${Math.floor(
+          (j * 256) / height
+        )}, ${Math.floor((i * j * 256 * 4) / (width * height))})`;
+        ctx.fillRect(i, j, 1, 1);
+      }
+    }
   };
   const canvasRef = useCanvas(width, height, draw);
 
