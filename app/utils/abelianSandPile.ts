@@ -3,24 +3,31 @@ export interface IAbelianSandpile {
 }
 
 export class AbelianSandpile implements IAbelianSandpile {
-  private TIME: number;
-  private rgb: number;
+  private VELOCITY: number;
+  private r: number;
+  private g: number;
+  private time: number;
 
   constructor() {
-    this.TIME = 1;
-    this.rgb = 0;
+    this.VELOCITY = 1;
+    this.r = 0;
+    this.g = 0;
+    this.time = 0;
   }
 
   animate(ctx: CanvasRenderingContext2D) {
-    this.rgb += this.TIME;
-    if (this.rgb > 256) {
-      this.rgb = 0;
-    }
-    for (let i = 0; i < 6; i++) {
-      for (let j = 0; j < 6; j++) {
-        ctx.fillStyle = `rgb(${Math.floor(this.rgb + 42.5 * i)}, ${Math.floor(
-          this.rgb + 42.5 * j
-        )}, 0)`;
+    this.time > 255 ? (this.time = 0) : (this.time += this.VELOCITY);
+    for (let i = 0; i < 12; i++) {
+      for (let j = 0; j < 12; j++) {
+        this.r = this.time + 10 * i;
+        if (this.r > 255) {
+          this.r -= 255;
+        }
+        this.g = this.time + 10 * j;
+        if (this.g > 255) {
+          this.g -= 255;
+        }
+        ctx.fillStyle = `rgb(${this.r}, ${this.g}, 0)`;
         ctx.fillRect(j * 25, i * 25, 25, 25);
       }
     }
