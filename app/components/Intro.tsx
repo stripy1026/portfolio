@@ -10,7 +10,7 @@ export const Intro = () => {
   const { width, height } = useClientWidthHeight(mainRef);
 
   return (
-    <main className="w-full h-screen my-5 bg-slate-500" ref={mainRef}>
+    <main ref={mainRef}>
       <BackgroundAnimation width={width} height={height} />
       <section>
         <div>
