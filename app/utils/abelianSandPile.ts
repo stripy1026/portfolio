@@ -19,6 +19,6 @@ export class AbelianSandpile implements IAbelianSandpile {
     this.i = Math.floor(Math.random() * this.WIDTH);
     this.j = Math.floor(Math.random() * this.HEIGHT);
     ctx.fillStyle = "rgb(0, 0, 0)";
-    ctx.fillRect(this.i, this.j, 25, 25);
+    ctx.fillRect(this.i, this.j, 1, 1);
   }
 }
