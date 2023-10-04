@@ -14,13 +14,13 @@ export const Intro = () => {
       <BackgroundAnimation width={width} height={height} />
       <section>
         <div>
-          <p>저는 아무것도 모릅니다</p>
-          <p>그렇기에, 모든 것을 배울 준비가 되어 있습니다</p>
+          <h1>저는 아무것도 모릅니다</h1>
+          <h1>그렇기에, 모든 것을 배울 준비가 되어 있습니다</h1>
         </div>
       </section>
       <section>
-        <p>조인우</p>
-        <p>프론트엔드 개발자</p>
+        <h2>조인우</h2>
+        <h2>프론트엔드 개발자</h2>
       </section>
       <Link href="#about">포트폴리오 확인</Link>
     </main>
