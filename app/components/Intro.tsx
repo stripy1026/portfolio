@@ -23,7 +23,7 @@ export const Intro = () => {
           <h1 className="my-1 text-3xl text-rose-600 font-bold">
             Abelian Sandpile Model
           </h1>
-          <h2 className="my-2 text-sm text-slate-400 font-semibold">
+          <h2 className="my-2 text-xs text-slate-400 font-semibold">
             졸업논문을 위해 공부했던 모델을 조금 변형해서 구현했습니다
           </h2>
         </section>
