@@ -27,9 +27,9 @@ export const Intro = () => {
         <section className="flex flex-col items-center">
           <h1>저는 아무것도 모릅니다</h1>
           <h1>그렇기에, 모든 것을 배울 준비가 되어 있습니다</h1>
+          <Link href="#about">포트폴리오 확인</Link>
         </section>
       </div>
-      <Link href="#about">포트폴리오 확인</Link>
     </main>
   );
 };
