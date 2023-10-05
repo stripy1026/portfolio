@@ -20,6 +20,6 @@ body {
 
 @layer base {
   main {
-    @apply w-full h-screen my-5 bg-black;
+    @apply w-full h-screen bg-gray-800;
   }
 }

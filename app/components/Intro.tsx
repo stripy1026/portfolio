@@ -16,7 +16,7 @@ export const Intro = () => {
       </section>
       <div className="relative bottom-full">
         <section className="flex flex-col items-center">
-          <h1 className="mt-10 text-slate-400 font-semibold">
+          <h1 className="mt-20 text-slate-400 font-semibold">
             랜딩 페이지 시뮬레이션
           </h1>
           <h1 className="my-2 text-5xl text-rose-600 font-bold">
