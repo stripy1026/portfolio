@@ -13,37 +13,36 @@ import {
 export const About = () => {
   return (
     <main id="about">
-      <span>소개 페이지</span>
-      <section>
-        <div className="flex">
-          <div>
+      <section className="pt-20 flex justify-around">
+        <div className="flex p-2 border-2 rounded-xl">
+          <div className="text-xl m-2 flex items-center">
             <FontAwesomeIcon icon={faUser} />
-            <span>조인우</span>
+            <span className="mx-2">조인우</span>
           </div>
           <div className="flex-col">
-            <div>
+            <div className="text-xl m-2">
               <FontAwesomeIcon icon={faCalendar} />
-              <span>1995.10.26</span>
+              <span className="mx-5">1995.10.26</span>
             </div>
-            <div>
+            <div className="text-xl m-2">
               <FontAwesomeIcon icon={faGraduationCap} />
-              <span>인하대학교 물리학과</span>
+              <span className="mx-2">인하대학교 물리학과</span>
             </div>
           </div>
         </div>
-        <div className="flex">
-          <div>
+        <div className="flex p-2 border-2 rounded-xl">
+          <div className="text-xl m-2 flex items-center">
             <FontAwesomeIcon icon={faBoltLightning} />
-            <span>강점</span>
+            <span className="mx-2">강점</span>
           </div>
           <div className="flex-col">
-            <div>
+            <div className="text-xl m-2">
               <FontAwesomeIcon icon={faBook} />
-              <span>배움의 즐거움, 무한한 호기심</span>
+              <span className="mx-4">배움의 즐거움, 무한한 호기심</span>
             </div>
-            <div>
+            <div className="text-xl m-2">
               <FontAwesomeIcon icon={faHeartCirclePlus} />
-              <span>상대방을 존중, 무한한 이해심</span>
+              <span className="mx-2">상대방을 존중, 무한한 이해심</span>
             </div>
           </div>
         </div>
