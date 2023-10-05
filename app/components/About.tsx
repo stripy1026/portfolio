@@ -12,7 +12,7 @@ import {
 
 export const About = () => {
   return (
-    <main>
+    <main id="about">
       <span>소개 페이지</span>
       <section>
         <div className="flex">
