@@ -1,11 +1,11 @@
 const TOPPLE_SIZE = 1;
-const INITIAL_TOPPLE_VELOCITY = 2000;
+const INITIAL_TOPPLE_VELOCITY = 1000;
 const MINIMUM_TOPPLE_VELOCITY = 10;
-const BRIGHT_RATIO = 10;
+const BRIGHT_RATIO = 1;
 const TOPPLE_WEIGHT = 1;
-const CRITICAL_LEVEL = 8;
+const CRITICAL_LEVEL = 4;
 const MAXIMUM_EXPLODE_RANGE = 4;
-const BURST_RATIO = 2;
+const BURST_RATIO = 8;
 
 // INITIAL TOPPLE VELOCITY must be changed depends on screen size
 
@@ -140,7 +140,7 @@ export class AbelianSandpile implements IAbelianSandpile {
       }
     }
     this.sandbox[topX][topY] -=
-      CRITICAL_LEVEL * MAXIMUM_EXPLODE_RANGE * BURST_RATIO * 16;
+      CRITICAL_LEVEL * MAXIMUM_EXPLODE_RANGE * BURST_RATIO * 160;
     this.unstableList.splice(this.randomDistribute, 1);
     this.drawLevel(ctx, topX, topY, this.sandbox[topX][topY]);
   }

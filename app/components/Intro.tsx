@@ -16,10 +16,11 @@ export const Intro = () => {
       </section>
       <div className="relative bottom-full">
         <section className="flex flex-col items-center">
-          <h1 className="mt-20 text-slate-400 font-semibold">
+          <h1 className="mt-20 mb-2 text-slate-400 font-semibold">
             랜딩 페이지 시뮬레이션
           </h1>
-          <h1 className="my-2 text-5xl text-rose-600 font-bold">
+          <h1 className="my-1 text-5xl text-rose-600 font-bold">UNIVERSE:</h1>
+          <h1 className="my-1 text-3xl text-rose-600 font-bold">
             Abelian Sandpile Model
           </h1>
           <h2 className="my-2 text-sm text-slate-400 font-semibold">
