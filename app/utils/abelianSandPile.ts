@@ -86,7 +86,7 @@ export class AbelianSandpile implements IAbelianSandpile {
         this.unstableList.push([dx[i], dy[i]]);
       }
     }
-    this.sandbox[topX][topY] -= 32;
+    this.sandbox[topX][topY] -= 20;
     this.unstableList.splice(this.randomDistribute, 1);
     this.drawLevel(ctx, topX, topY, this.sandbox[topX][topY]);
     console.log("avalanche");

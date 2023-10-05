@@ -13,7 +13,10 @@ export const BackgroundAnimation = ({
   const sandpile: IAbelianSandpile = new AbelianSandpile(width, height);
 
   const animate = (ctx: CanvasRenderingContext2D) => {
-    sandpile.isStable() ? sandpile.topple(ctx) : sandpile.makeAvalanche(ctx);
+    sandpile.topple(ctx);
+    if (!sandpile.isStable()) {
+      sandpile.makeAvalanche(ctx);
+    }
   };
   const canvasRef = useCanvas(width, height, animate);
 
