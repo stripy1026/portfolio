@@ -2,11 +2,19 @@ import Link from "next/link";
 
 export const NavBar = () => {
   return (
-    <nav className="fixed top-0 w-full bg-red-500 z-10">
-      <Link href="#">TOP</Link>
-      <Link href="#about">ABOUT</Link>
-      <Link href="#portfolio">PORTFOLIO</Link>
-      <Link href="#contact">CONTACT</Link>
+    <nav className="fixed py-2 top-0 w-full bg-rose-700 z-10 flex justify-center">
+      <Link className="px-5" href="#">
+        TOP
+      </Link>
+      <Link className="px-5" href="#about">
+        ABOUT
+      </Link>
+      <Link className="px-5" href="#portfolio">
+        PORTFOLIO
+      </Link>
+      <Link className="px-5" href="#contact">
+        CONTACT
+      </Link>
     </nav>
   );
 };
