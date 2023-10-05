@@ -140,7 +140,7 @@ export class AbelianSandpile implements IAbelianSandpile {
       }
     }
     this.sandbox[topX][topY] -=
-      CRITICAL_LEVEL * MAXIMUM_EXPLODE_RANGE * BURST_RATIO * 160;
+      CRITICAL_LEVEL * MAXIMUM_EXPLODE_RANGE * BURST_RATIO * 16;
     this.unstableList.splice(this.randomDistribute, 1);
     this.drawLevel(ctx, topX, topY, this.sandbox[topX][topY]);
   }
