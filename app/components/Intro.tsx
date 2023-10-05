@@ -16,14 +16,22 @@ export const Intro = () => {
       </section>
       <div className="relative bottom-full">
         <section className="flex flex-col items-center">
-          <h1>랜딩 페이지 애니메이션</h1>
-          <h1>Abelian Sandpile Model</h1>
-          <h2>졸업논문을 위해 공부했던 모델을 조금 변형해서 구현했습니다</h2>
+          <h1 className="mt-10 text-slate-400">랜딩 페이지 시뮬레이션</h1>
+          <h1 className="my-2 text-4xl text-rose-600 font-semibold">
+            Abelian Sandpile Model
+          </h1>
+          <h2 className="my-2 text-sm text-slate-400">
+            졸업논문을 위해 공부했던 모델을 조금 변형해서 구현했습니다
+          </h2>
         </section>
+      </div>
+      <div className="relative bottom-2/3">
         <section className="flex flex-col items-center">
           <h2>조인우</h2>
           <h2>프론트엔드 개발자</h2>
         </section>
+      </div>
+      <div className="relative bottom-1/2">
         <section className="flex flex-col items-center">
           <h1>저는 아무것도 모릅니다</h1>
           <h1>그렇기에, 모든 것을 배울 준비가 되어 있습니다</h1>
