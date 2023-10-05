@@ -22,7 +22,7 @@ export const Intro = () => {
           <h1 className="my-2 text-5xl text-rose-600 font-bold">
             Abelian Sandpile Model
           </h1>
-          <h2 className="my-2 text-sm text-slate-400">
+          <h2 className="my-2 text-sm text-slate-400 font-semibold">
             졸업논문을 위해 공부했던 모델을 조금 변형해서 구현했습니다
           </h2>
         </section>
@@ -45,8 +45,10 @@ export const Intro = () => {
           >
             포트폴리오 확인
           </Link>
-          <span className=" text-slate-400">저는, 모르는 게 많습니다</span>
-          <span className=" text-slate-400">
+          <span className=" text-slate-400 font-semibold">
+            저는, 모르는 게 많습니다
+          </span>
+          <span className=" text-slate-400 font-semibold">
             저는, 모든 것을 배울 준비가 되어 있습니다
           </span>
         </section>
