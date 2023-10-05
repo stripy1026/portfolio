@@ -34,7 +34,11 @@ export class AbelianSandpile implements IAbelianSandpile {
     level: number
   ) {
     if (!ctx) return;
-    ctx.fillStyle = `rgb(${level * 50}, ${level * 50}, ${level * 50})`;
+    if (level < 0) {
+      ctx.fillStyle = "rgb(0, 0, 0)";
+    } else {
+      ctx.fillStyle = `rgb(${level * 50}, ${level * 50}, ${level * 50})`;
+    }
     ctx.fillRect(posX * 10, posY * 10, 10, 10);
   }
 
@@ -76,13 +80,13 @@ export class AbelianSandpile implements IAbelianSandpile {
     for (let i = 0; i < 4; ++i) {
       if (dx[i] < 0 || dx[i] >= this.randomX * 10) continue;
       if (dy[i] < 0 || dy[i] >= this.randomX * 10) continue;
-      this.sandbox[dx[i]][dy[i]] += this.sandbox[topX][topY] / 4;
+      this.sandbox[dx[i]][dy[i]] += 4;
       this.drawLevel(ctx, dx[i], dy[i], this.sandbox[dx[i]][dy[i]]);
       if (this.sandbox[dx[i]][dy[i]] >= 4) {
         this.unstableList.push([dx[i], dy[i]]);
       }
     }
-    this.sandbox[topX][topY] = 0;
+    this.sandbox[topX][topY] -= 32;
     this.unstableList.splice(this.randomDistribute, 1);
     this.drawLevel(ctx, topX, topY, this.sandbox[topX][topY]);
     console.log("avalanche");
