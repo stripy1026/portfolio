@@ -61,21 +61,29 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="flex">
-        <Image src="C.svg" alt="C" width={96} height={96} />
-        <Image src="C++.svg" alt="C++" width={96} height={96} />
-        <Image src="javascript.svg" alt="javascript" width={96} height={96} />
-        <Image src="html.svg" alt="html" width={96} height={96} />
-        <Image src="css.svg" alt="css" width={96} height={96} />
-        <Image src="typescript.svg" alt="typescript" width={96} height={96} />
-        <Image src="react.svg" alt="react" width={96} height={96} />
-        <Image src="nextjs.svg" alt="nextjs" width={96} height={96} />
-        <Image
-          src="react-native.svg"
-          alt="react-native"
-          width={96}
-          height={96}
-        />
+      <section className="flex m-10">
+        <div>
+          <Image src="C.svg" alt="C" width={96} height={96} />
+          <Image src="C++.svg" alt="C++" width={96} height={96} />
+        </div>
+        <div>
+          <Image src="html.svg" alt="html" width={96} height={96} />
+          <Image src="css.svg" alt="css" width={96} height={96} />
+        </div>
+        <div>
+          <Image src="javascript.svg" alt="javascript" width={96} height={96} />
+          <Image src="typescript.svg" alt="typescript" width={96} height={96} />
+        </div>
+        <div>
+          <Image src="react.svg" alt="react" width={96} height={96} />
+          <Image src="nextjs.svg" alt="nextjs" width={96} height={96} />
+          <Image
+            src="react-native.svg"
+            alt="react-native"
+            width={96}
+            height={96}
+          />
+        </div>
       </section>
       <section>
         <p>
