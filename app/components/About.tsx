@@ -12,7 +12,8 @@ import {
 
 export const About = () => {
   return (
-    <main id="about" className="responsive">
+    // 임시 min-h 작업용
+    <main id="about" className="responsive min-h-[1080px]">
       <section className="pt-20 flex justify-around">
         <div className="flex p-2 border-2 rounded-xl">
           <div className="text-xl m-2 flex items-center">
