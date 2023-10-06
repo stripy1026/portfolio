@@ -89,7 +89,10 @@ export class AbelianSandpile implements IAbelianSandpile {
         this.sandbox[this.randomX][this.randomY]
       );
 
-      if (this.sandbox[this.randomX][this.randomY] >= CRITICAL_LEVEL) {
+      if (
+        this.unstableList.length < this.WIDTH * this.HEIGHT &&
+        this.sandbox[this.randomX][this.randomY] >= CRITICAL_LEVEL
+      ) {
         this.unstableList.push([this.randomX, this.randomY]);
       }
     }
@@ -134,7 +137,10 @@ export class AbelianSandpile implements IAbelianSandpile {
         }
         this.sandbox[dx[i]][dy[i]] += CRITICAL_LEVEL * BURST_RATIO;
         this.drawLevel(ctx, dx[i], dy[i], this.sandbox[dx[i]][dy[i]]);
-        if (this.sandbox[dx[i]][dy[i]] >= CRITICAL_LEVEL) {
+        if (
+          this.unstableList.length < this.WIDTH * this.HEIGHT &&
+          this.sandbox[dx[i]][dy[i]] >= CRITICAL_LEVEL
+        ) {
           this.unstableList.push([dx[i], dy[i]]);
         }
       }
