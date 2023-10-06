@@ -13,6 +13,14 @@ body {
   background-color: rgb(31, 41, 55);
 }
 
+#pentagon {
+  position: relative;
+  width: 145px;
+  height: 140px;
+  background: rgb(190, 18, 60);
+  clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
 @layer base {
   main {
     @apply w-full h-screen;
@@ -20,12 +28,5 @@ body {
   .responsive {
     @apply max-w-screen-md;
     @apply xl:max-w-screen-xl;
-  }
-}
-
-@layer components {
-  .pentagon {
-    @apply bg-rose-700;
-    @apply w-[100px] h-[100px];
   }
 }

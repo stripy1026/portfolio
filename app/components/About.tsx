@@ -21,7 +21,7 @@ export const About = () => {
       </div>
       <section className="flex w-full justify-around">
         <div className="p-2 w-5/12 border-2 rounded-xl flex flex-col items-center">
-          <div className="pentagon">
+          <div id="pentagon">
             <div className="text-7xl m-10">
               <FontAwesomeIcon icon={faUser} />
             </div>
