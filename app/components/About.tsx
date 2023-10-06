@@ -72,80 +72,82 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="flex flex-col m-10">
-        <div className="flex">
-          <Image
-            className="m-4"
-            src="C.svg"
-            alt="C"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-          <Image
-            className="m-4"
-            src="C++.svg"
-            alt="C++"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-          <span>{dayOfC}일</span>
-        </div>
-        <div className="flex">
-          <Image
-            className="m-4"
-            src="html.svg"
-            alt="html"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-          <Image
-            className="m-4"
-            src="css.svg"
-            alt="css"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-        </div>
-        <div className="flex">
-          <Image
-            className="m-4"
-            src="javascript.svg"
-            alt="javascript"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-          <Image
-            className="m-4"
-            src="typescript.svg"
-            alt="typescript"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-        </div>
-        <div className="flex">
-          <Image
-            className="m-4"
-            src="react.svg"
-            alt="react"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-          <Image
-            className="m-4"
-            src="nextjs.svg"
-            alt="nextjs"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-          <Image
-            className="m-4"
-            src="react-native.svg"
-            alt="react-native"
-            width={SVG_SIZE}
-            height={SVG_SIZE}
-          />
-        </div>
-      </section>
+      <div className="flex m-10">
+        <section className="flex flex-col m-5">
+          <div className="flex">
+            <Image
+              className="m-4"
+              src="C.svg"
+              alt="C"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+            <Image
+              className="m-4"
+              src="C++.svg"
+              alt="C++"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+          </div>
+          <div className="flex">
+            <Image
+              className="m-4"
+              src="html.svg"
+              alt="html"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+            <Image
+              className="m-4"
+              src="css.svg"
+              alt="css"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+          </div>
+          <div className="flex">
+            <Image
+              className="m-4"
+              src="javascript.svg"
+              alt="javascript"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+            <Image
+              className="m-4"
+              src="typescript.svg"
+              alt="typescript"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+          </div>
+          <div className="flex">
+            <Image
+              className="m-4"
+              src="react.svg"
+              alt="react"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+            <Image
+              className="m-4"
+              src="nextjs.svg"
+              alt="nextjs"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+            <Image
+              className="m-4"
+              src="react-native.svg"
+              alt="react-native"
+              width={SVG_SIZE}
+              height={SVG_SIZE}
+            />
+          </div>
+        </section>
+        <section className="flex flex-col m-5">C: blah time</section>
+      </div>
       <section>
         <p>
           <a
