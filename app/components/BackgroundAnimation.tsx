@@ -14,7 +14,6 @@ export const BackgroundAnimation = ({
 
   const animate = (ctx: CanvasRenderingContext2D) => {
     if (sandpile.getStackSize() > width * height) {
-      console.log("stack full");
       return;
     }
     sandpile.topple(ctx);
