@@ -12,7 +12,6 @@ import {
 
 export const About = () => {
   return (
-    // 임시 min-h 작업용
     <main id="about" className="responsive min-h-[1080px]">
       <div className="m-20 flex justify-center">
         <span className="text-rose-700 font-bold text-5xl underline">
