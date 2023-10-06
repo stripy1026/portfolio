@@ -10,9 +10,11 @@ import {
   faBoltLightning,
 } from "@fortawesome/free-solid-svg-icons";
 
+const SVG_SIZE = 72;
+
 export const About = () => {
   return (
-    <main id="about" className="responsive min-h-[1080px]">
+    <main id="about" className="responsive min-h-[2000px]">
       <div className="m-20 flex justify-center">
         <span className="text-rose-700 font-bold text-5xl underline">
           ABOUT
@@ -61,27 +63,76 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="flex m-10">
-        <div>
-          <Image src="C.svg" alt="C" width={96} height={96} />
-          <Image src="C++.svg" alt="C++" width={96} height={96} />
-        </div>
-        <div>
-          <Image src="html.svg" alt="html" width={96} height={96} />
-          <Image src="css.svg" alt="css" width={96} height={96} />
-        </div>
-        <div>
-          <Image src="javascript.svg" alt="javascript" width={96} height={96} />
-          <Image src="typescript.svg" alt="typescript" width={96} height={96} />
-        </div>
-        <div>
-          <Image src="react.svg" alt="react" width={96} height={96} />
-          <Image src="nextjs.svg" alt="nextjs" width={96} height={96} />
+      <section className="flex flex-col m-10">
+        <div className="flex">
           <Image
+            className="m-4"
+            src="C.svg"
+            alt="C"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+          <Image
+            className="m-4"
+            src="C++.svg"
+            alt="C++"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+        </div>
+        <div className="flex">
+          <Image
+            className="m-4"
+            src="html.svg"
+            alt="html"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+          <Image
+            className="m-4"
+            src="css.svg"
+            alt="css"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+        </div>
+        <div className="flex">
+          <Image
+            className="m-4"
+            src="javascript.svg"
+            alt="javascript"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+          <Image
+            className="m-4"
+            src="typescript.svg"
+            alt="typescript"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+        </div>
+        <div className="flex">
+          <Image
+            className="m-4"
+            src="react.svg"
+            alt="react"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+          <Image
+            className="m-4"
+            src="nextjs.svg"
+            alt="nextjs"
+            width={SVG_SIZE}
+            height={SVG_SIZE}
+          />
+          <Image
+            className="m-4"
             src="react-native.svg"
             alt="react-native"
-            width={96}
-            height={96}
+            width={SVG_SIZE}
+            height={SVG_SIZE}
           />
         </div>
       </section>
