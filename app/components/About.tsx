@@ -14,11 +14,16 @@ export const About = () => {
   return (
     // 임시 min-h 작업용
     <main id="about" className="responsive min-h-[1080px]">
-      <section className="pt-20 flex justify-around">
-        <div className="flex p-2 border-2 rounded-xl">
-          <div className="text-xl m-2 flex items-center">
+      <div className="m-20 flex justify-center">
+        <span className="text-rose-700 font-bold text-5xl underline">
+          ABOUT
+        </span>
+      </div>
+      <section className="flex flex-col items-center">
+        <div className="flex p-2 border-2 rounded-xl w-11/12 justify-around">
+          <div className="text-3xl m-2 flex items-center">
             <FontAwesomeIcon icon={faUser} />
-            <span className="mx-2">조인우</span>
+            <span className="mx-2 font-bold">프로필</span>
           </div>
           <div className="flex-col">
             <div className="text-xl m-2">
@@ -31,19 +36,19 @@ export const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex p-2 border-2 rounded-xl">
-          <div className="text-xl m-2 flex items-center">
+        <div className="flex mt-10 p-2 border-2 rounded-xl w-11/12 justify-around">
+          <div className="text-3xl m-2 flex items-center">
             <FontAwesomeIcon icon={faBoltLightning} />
-            <span className="mx-2">강점</span>
+            <span className="mx-2 font-bold">강 점</span>
           </div>
           <div className="flex-col">
             <div className="text-xl m-2">
               <FontAwesomeIcon icon={faBook} />
-              <span className="mx-4">배움의 즐거움, 무한한 호기심</span>
+              <span className="mx-4 text-sm">배움의 즐거움, 무한한 호기심</span>
             </div>
             <div className="text-xl m-2">
               <FontAwesomeIcon icon={faHeartCirclePlus} />
-              <span className="mx-2">상대방을 존중, 무한한 이해심</span>
+              <span className="mx-2 text-sm">상대방을 존중, 무한한 이해심</span>
             </div>
           </div>
         </div>
