@@ -21,8 +21,10 @@ export const About = () => {
       </div>
       <section className="flex w-full justify-around">
         <div className="p-2 w-5/12 border-2 rounded-xl flex flex-col items-center">
-          <div className="text-9xl m-10">
-            <FontAwesomeIcon icon={faUser} />
+          <div className="pentagon">
+            <div className="text-7xl m-10">
+              <FontAwesomeIcon icon={faUser} />
+            </div>
           </div>
           <div className="text-l m-2">
             <FontAwesomeIcon icon={faCalendar} />
@@ -34,7 +36,7 @@ export const About = () => {
           </div>
         </div>
         <div className="p-2 w-5/12 border-2 rounded-xl flex flex-col items-center">
-          <div className="text-9xl m-10">
+          <div className="text-7xl m-10">
             <FontAwesomeIcon icon={faBoltLightning} />
           </div>
           <div className="text-l m-2">

@@ -22,3 +22,10 @@ body {
     @apply xl:max-w-screen-xl;
   }
 }
+
+@layer components {
+  .pentagon {
+    @apply bg-rose-700;
+    @apply w-[100px] h-[100px];
+  }
+}
