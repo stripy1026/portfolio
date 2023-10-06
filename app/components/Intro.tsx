@@ -10,7 +10,7 @@ export const Intro = () => {
   const { width, height } = useClientWidthHeight(mainRef);
 
   return (
-    <main ref={mainRef}>
+    <main ref={mainRef} className="min-h-[800px]">
       <section className="relative">
         <BackgroundAnimation width={width} height={height} />
       </section>
