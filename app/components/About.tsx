@@ -18,6 +18,14 @@ const JS_DAY = new Date(2023, 1, 7);
 const REACT_DAY = new Date(2023, 1, 21);
 const NEXT_DAY = new Date(2023, 5, 5);
 const RN_DAY = new Date(2023, 8, 26);
+const DAYS = [
+  { day: C_DAY, name: "C" },
+  { day: CPP_DAY, name: "C++" },
+  { day: JS_DAY, name: "Javascript" },
+  { day: REACT_DAY, name: "React.js" },
+  { day: NEXT_DAY, name: "Next.js" },
+  { day: RN_DAY, name: "React Native" },
+];
 
 export const About = () => {
   const dayOfC = calculateDayPassed(C_DAY);
@@ -72,8 +80,8 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <div className="flex m-10">
-        <section className="flex flex-col m-5">
+      <div className="flex m-10 justify-center">
+        <section className="flex flex-col m-5 w-5/12">
           <div className="flex">
             <Image
               className="m-4"
@@ -146,7 +154,17 @@ export const About = () => {
             />
           </div>
         </section>
-        <section className="flex flex-col m-5">C: blah time</section>
+        <section className="bg-slate-500 flex-col m-5 w-5/12">
+          <div className="flex my-1">
+            <div className="bg-rose-700 flex justify-center grow-[1]">
+              <span>C</span>
+            </div>
+            <div className="bg-rose-900 flex justify-center grow-[3]">
+              {dayOfC}
+              <span>일</span>
+            </div>
+          </div>
+        </section>
       </div>
       <section>
         <p>
