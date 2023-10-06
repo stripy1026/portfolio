@@ -19,37 +19,31 @@ export const About = () => {
           ABOUT
         </span>
       </div>
-      <section className="flex flex-col items-center">
-        <div className="flex p-2 border-2 rounded-xl w-11/12 justify-around">
-          <div className="text-3xl m-2 flex items-center">
+      <section className="flex w-full justify-around">
+        <div className="p-2 w-5/12 border-2 rounded-xl flex flex-col items-center">
+          <div className="text-9xl m-10">
             <FontAwesomeIcon icon={faUser} />
-            <span className="mx-2 font-bold">프로필</span>
           </div>
-          <div className="flex-col">
-            <div className="text-xl m-2">
-              <FontAwesomeIcon icon={faCalendar} />
-              <span className="mx-5">1995.10.26</span>
-            </div>
-            <div className="text-xl m-2">
-              <FontAwesomeIcon icon={faGraduationCap} />
-              <span className="mx-2">인하대학교 물리학과</span>
-            </div>
+          <div className="text-l m-2">
+            <FontAwesomeIcon icon={faCalendar} />
+            <span className="mx-5">1995.10.26</span>
+          </div>
+          <div className="text-l m-2">
+            <FontAwesomeIcon icon={faGraduationCap} />
+            <span className="mx-2">인하대학교 물리학과</span>
           </div>
         </div>
-        <div className="flex mt-10 p-2 border-2 rounded-xl w-11/12 justify-around">
-          <div className="text-3xl m-2 flex items-center">
+        <div className="p-2 w-5/12 border-2 rounded-xl flex flex-col items-center">
+          <div className="text-9xl m-10">
             <FontAwesomeIcon icon={faBoltLightning} />
-            <span className="mx-2 font-bold">강 점</span>
           </div>
-          <div className="flex-col">
-            <div className="text-xl m-2">
-              <FontAwesomeIcon icon={faBook} />
-              <span className="mx-4 text-sm">배움의 즐거움, 무한한 호기심</span>
-            </div>
-            <div className="text-xl m-2">
-              <FontAwesomeIcon icon={faHeartCirclePlus} />
-              <span className="mx-2 text-sm">상대방을 존중, 무한한 이해심</span>
-            </div>
+          <div className="text-l m-2">
+            <FontAwesomeIcon icon={faBook} />
+            <span className="mx-4">배움의 즐거움, 무한한 호기심</span>
+          </div>
+          <div className="text-l m-2">
+            <FontAwesomeIcon icon={faHeartCirclePlus} />
+            <span className="mx-2">상대방을 존중, 무한한 이해심</span>
           </div>
         </div>
       </section>
