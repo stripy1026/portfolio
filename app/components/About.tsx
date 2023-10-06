@@ -22,20 +22,18 @@ const REACT_DAY = new Date(2023, 1, 21);
 const NEXT_DAY = new Date(2023, 5, 5);
 const RN_DAY = new Date(2023, 8, 26);
 const DAYS = [
-  { day: C_DAY, name: "C" },
-  { day: CPP_DAY, name: "C++" },
-  { day: HTML_DAY, name: "HTML" },
-  { day: CSS_DAY, name: "CSS" },
-  { day: JS_DAY, name: "Javascript" },
-  { day: TS_DAY, name: "Typescript" },
-  { day: REACT_DAY, name: "React.js" },
-  { day: NEXT_DAY, name: "Next.js" },
-  { day: RN_DAY, name: "React Native" },
+  { day: calculateDayPassed(C_DAY), name: "C" },
+  { day: calculateDayPassed(CPP_DAY), name: "C++" },
+  { day: calculateDayPassed(HTML_DAY), name: "HTML" },
+  { day: calculateDayPassed(CSS_DAY), name: "CSS" },
+  { day: calculateDayPassed(JS_DAY), name: "Javascript" },
+  { day: calculateDayPassed(TS_DAY), name: "Typescript" },
+  { day: calculateDayPassed(REACT_DAY), name: "React.js" },
+  { day: calculateDayPassed(NEXT_DAY), name: "Next.js" },
+  { day: calculateDayPassed(RN_DAY), name: "React Native" },
 ];
 
 export const About = () => {
-  const dayOfC = calculateDayPassed(C_DAY);
-
   return (
     <main id="about" className="responsive min-h-[2000px]">
       <div className="m-20 flex justify-center">
@@ -86,39 +84,41 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <div className="flex m-10 justify-center">
-        <section className="flex flex-col m-5 w-5/12">
-          <div className="flex">
-            <Image
-              className="m-4"
-              src="C.svg"
-              alt="C"
-              width={SVG_SIZE}
-              height={SVG_SIZE}
-            />
-            <Image
-              className="m-4"
-              src="C++.svg"
-              alt="C++"
-              width={SVG_SIZE}
-              height={SVG_SIZE}
-            />
-          </div>
-          <div className="flex">
-            <Image
-              className="m-4"
-              src="html.svg"
-              alt="html"
-              width={SVG_SIZE}
-              height={SVG_SIZE}
-            />
-            <Image
-              className="m-4"
-              src="css.svg"
-              alt="css"
-              width={SVG_SIZE}
-              height={SVG_SIZE}
-            />
+      <div className="max-[720px]:block flex m-10 justify-center">
+        <section className="flex flex-col m-5 w-1/2 max-[720px]:items-center max-[720px]:w-11/12">
+          <div className="xl:flex">
+            <div className="flex">
+              <Image
+                className="m-4"
+                src="C.svg"
+                alt="C"
+                width={SVG_SIZE}
+                height={SVG_SIZE}
+              />
+              <Image
+                className="m-4"
+                src="C++.svg"
+                alt="C++"
+                width={SVG_SIZE}
+                height={SVG_SIZE}
+              />
+            </div>
+            <div className="flex">
+              <Image
+                className="m-4"
+                src="html.svg"
+                alt="html"
+                width={SVG_SIZE}
+                height={SVG_SIZE}
+              />
+              <Image
+                className="m-4"
+                src="css.svg"
+                alt="css"
+                width={SVG_SIZE}
+                height={SVG_SIZE}
+              />
+            </div>
           </div>
           <div className="flex">
             <Image
@@ -160,16 +160,17 @@ export const About = () => {
             />
           </div>
         </section>
-        <section className="bg-slate-500 flex-col m-5 w-5/12">
-          <div className="flex my-1">
-            <div className="bg-rose-700 flex justify-center grow-[1]">
-              <span>C</span>
+        <section className="flex-col w-1/2 max-[720px]:w-full">
+          {DAYS.map(({ day, name }) => (
+            <div key={name} className="flex my-2">
+              <div className="bg-rose-700 flex justify-center min-w-[150px] min-h-[40px] items-center">
+                <span className="text-xl">{name}</span>
+              </div>
+              <div className="bg-rose-900 flex justify-center flex-grow min-h-[40px] items-center">
+                <span className="text-xl">{day}일</span>
+              </div>
             </div>
-            <div className="bg-rose-900 flex justify-center grow-[3]">
-              {dayOfC}
-              <span>일</span>
-            </div>
-          </div>
+          ))}
         </section>
       </div>
       <section>
