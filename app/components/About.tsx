@@ -9,10 +9,19 @@ import {
   faHeartCirclePlus,
   faBoltLightning,
 } from "@fortawesome/free-solid-svg-icons";
+import { calculateDayPassed } from "@/utils/calculateDayPassed";
 
 const SVG_SIZE = 72;
+const C_DAY = new Date(2021, 4, 3);
+const CPP_DAY = new Date(2022, 3, 7);
+const JS_DAY = new Date(2023, 1, 7);
+const REACT_DAY = new Date(2023, 1, 21);
+const NEXT_DAY = new Date(2023, 5, 5);
+const RN_DAY = new Date(2023, 8, 26);
 
 export const About = () => {
+  const dayOfC = calculateDayPassed(C_DAY);
+
   return (
     <main id="about" className="responsive min-h-[2000px]">
       <div className="m-20 flex justify-center">
@@ -79,6 +88,7 @@ export const About = () => {
             width={SVG_SIZE}
             height={SVG_SIZE}
           />
+          <span>{dayOfC}일</span>
         </div>
         <div className="flex">
           <Image
