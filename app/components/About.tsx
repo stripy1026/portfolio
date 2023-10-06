@@ -14,14 +14,20 @@ import { calculateDayPassed } from "@/utils/calculateDayPassed";
 const SVG_SIZE = 72;
 const C_DAY = new Date(2021, 4, 3);
 const CPP_DAY = new Date(2022, 3, 7);
+const HTML_DAY = new Date(2022, 12, 28);
+const CSS_DAY = new Date(2022, 12, 29);
 const JS_DAY = new Date(2023, 1, 7);
+const TS_DAY = new Date(2023, 1, 16);
 const REACT_DAY = new Date(2023, 1, 21);
 const NEXT_DAY = new Date(2023, 5, 5);
 const RN_DAY = new Date(2023, 8, 26);
 const DAYS = [
   { day: C_DAY, name: "C" },
   { day: CPP_DAY, name: "C++" },
+  { day: HTML_DAY, name: "HTML" },
+  { day: CSS_DAY, name: "CSS" },
   { day: JS_DAY, name: "Javascript" },
+  { day: TS_DAY, name: "Typescript" },
   { day: REACT_DAY, name: "React.js" },
   { day: NEXT_DAY, name: "Next.js" },
   { day: RN_DAY, name: "React Native" },
