@@ -6,12 +6,14 @@ import { Contact } from "@/components/Contact";
 
 export default function Page() {
   return (
-    <main>
+    <div>
       <NavBar />
       <Intro />
-      <About />
-      <Portfolio />
-      <Contact />
-    </main>
+      <main className="flex flex-col items-center">
+        <About />
+        <Portfolio />
+        <Contact />
+      </main>
+    </div>
   );
 }

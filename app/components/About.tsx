@@ -12,7 +12,7 @@ import {
 
 export const About = () => {
   return (
-    <main id="about">
+    <main id="about" className="responsive">
       <section className="pt-20 flex justify-around">
         <div className="flex p-2 border-2 rounded-xl">
           <div className="text-xl m-2 flex items-center">

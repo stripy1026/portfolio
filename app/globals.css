@@ -17,4 +17,8 @@ body {
   main {
     @apply w-full h-screen;
   }
+  .responsive {
+    @apply max-w-screen-md;
+    @apply xl:max-w-screen-xl;
+  }
 }
