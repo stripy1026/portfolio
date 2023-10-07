@@ -10,8 +10,11 @@ export default function Page() {
       <NavBar />
       <Intro />
       <main className="flex flex-col items-center">
+        <div className="border-b-2 w-full" />
         <About />
+        <div className="border-t-2 w-full" />
         <Portfolio />
+        <div className="border-t-2 w-full" />
         <Contact />
       </main>
     </div>
