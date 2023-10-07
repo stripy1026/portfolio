@@ -6,6 +6,7 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MessageForm } from "./MessageForm";
 
 export const Contact = () => {
   return (
@@ -49,8 +50,10 @@ export const Contact = () => {
             </a>
           </span>
         </div>
-        <div className="bg-blue-500">
-          <span>이메일 적는 칸</span>
+        <div className="flex flex-col items-center">
+          <span className="text-2xl mt-10">메세지를 남겨주세요</span>
+          <span>이 메세지는 관리자만 확인 가능합니다</span>
+          <MessageForm />
         </div>
       </div>
     </main>
