@@ -12,6 +12,7 @@ const BURST_RATIO = 8;
 export interface IAbelianSandpile {
   isStable: () => boolean;
   getStackSize: () => number;
+  isStackFull: () => boolean;
   topple: (ctx: CanvasRenderingContext2D) => void;
   makeAvalanche: (ctx: CanvasRenderingContext2D) => void;
 }
@@ -19,6 +20,7 @@ export interface IAbelianSandpile {
 export class AbelianSandpile implements IAbelianSandpile {
   private WIDTH: number;
   private HEIGHT: number;
+  private MAX_STACK_SIZE: number;
   private randomX: number;
   private randomY: number;
   private randomDistribute: number;
@@ -31,6 +33,7 @@ export class AbelianSandpile implements IAbelianSandpile {
   constructor(screenWidth: number, screenHeight: number) {
     this.WIDTH = screenWidth;
     this.HEIGHT = screenHeight;
+    this.MAX_STACK_SIZE = this.WIDTH * this.HEIGHT;
     this.randomX = 0;
     this.randomY = 0;
     this.randomDistribute = 0;
@@ -69,6 +72,10 @@ export class AbelianSandpile implements IAbelianSandpile {
     return this.unstableList.length;
   }
 
+  isStackFull() {
+    return this.unstableList.length > this.MAX_STACK_SIZE;
+  }
+
   isStable() {
     return this.unstableList.length === 0;
   }
@@ -94,7 +101,10 @@ export class AbelianSandpile implements IAbelianSandpile {
         this.sandbox[this.randomX][this.randomY]
       );
 
-      if (this.sandbox[this.randomX][this.randomY] >= CRITICAL_LEVEL) {
+      if (
+        !this.isStackFull() &&
+        this.sandbox[this.randomX][this.randomY] >= CRITICAL_LEVEL
+      ) {
         this.unstableList.push([this.randomX, this.randomY]);
       }
     }
@@ -139,7 +149,10 @@ export class AbelianSandpile implements IAbelianSandpile {
         }
         this.sandbox[dx[i]][dy[i]] += CRITICAL_LEVEL * BURST_RATIO;
         this.drawLevel(ctx, dx[i], dy[i], this.sandbox[dx[i]][dy[i]]);
-        if (this.sandbox[dx[i]][dy[i]] >= CRITICAL_LEVEL) {
+        if (
+          !this.isStackFull() &&
+          this.sandbox[dx[i]][dy[i]] >= CRITICAL_LEVEL
+        ) {
           this.unstableList.push([dx[i], dy[i]]);
         }
       }

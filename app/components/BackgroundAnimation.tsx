@@ -13,9 +13,6 @@ export const BackgroundAnimation = ({
   const sandpile: IAbelianSandpile = new AbelianSandpile(width, height);
 
   const animate = (ctx: CanvasRenderingContext2D) => {
-    if (sandpile.getStackSize() > width * height) {
-      return;
-    }
     sandpile.topple(ctx);
     if (!sandpile.isStable()) {
       sandpile.makeAvalanche(ctx);
