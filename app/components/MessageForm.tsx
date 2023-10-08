@@ -1,5 +1,6 @@
 "use client";
 
+import { createMessageAction } from "@/_actions";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -17,22 +18,9 @@ export const MessageForm = () => {
       setIsSubmit(false);
       return;
     }
-    try {
-      const response = await fetch(`api/postMessages`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ name, title, message }),
-      });
-      const { success, err } = await response.json();
-      const errorCode = response.ok ? 0 : response.status;
-      if (errorCode) return <div>ErrorPage</div>;
-      setIsOK(true);
-      setIsSubmit(true);
-    } catch (e) {
-      return <div>ErrorPage</div>;
-    }
+    await createMessageAction({ name, title, message, path: "/" });
+    setIsOK(true);
+    setIsSubmit(true);
   };
 
   return (
