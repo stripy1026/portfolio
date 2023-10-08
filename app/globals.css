@@ -28,7 +28,7 @@ body {
 
 @layer base {
   main {
-    @apply w-full h-screen;
+    @apply w-full;
   }
   .responsive {
     @apply max-w-screen-md;

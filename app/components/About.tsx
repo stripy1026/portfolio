@@ -36,7 +36,7 @@ const DAYS = [
 
 export const About = () => {
   return (
-    <main id="about" className="responsive min-h-[1450px]">
+    <main id="about" className="responsive mb-10">
       <div className="m-20 flex justify-center">
         <span className="text-rose-700 font-bold text-5xl underline">
           ABOUT

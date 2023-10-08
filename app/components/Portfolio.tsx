@@ -8,12 +8,21 @@ export const Portfolio = () => {
           PORTFOLIO
         </span>
       </div>
-      <p>포트폴리오 개요 리스트</p>
-      <p>클릭시 포트폴리오 개별 페이지로 이동</p>
-      <EachPortfoilo />
-      <EachPortfoilo />
-      <EachPortfoilo />
-      {/*내부에 버튼 클릭시 포폴 페이지로 링크 */}
+      <EachPortfoilo
+        imageSrc="/transcendence_1.png"
+        title="transcendence"
+        language="React / node.js"
+      />
+      <EachPortfoilo
+        imageSrc="/transcendence_1.png"
+        title="transcendence"
+        language="React / node.js"
+      />
+      <EachPortfoilo
+        imageSrc="/transcendence_1.png"
+        title="transcendence"
+        language="React / node.js"
+      />
     </main>
   );
 };
