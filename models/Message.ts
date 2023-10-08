@@ -34,12 +34,10 @@ import mongoose from "mongoose";
 })
 @index({ title: 1 })
 class MessageClass {
-  @prop({ required: true, unique: true })
+  @prop({ required: true })
   name: string;
-
   @prop({ required: true })
   title: string;
-
   @prop({ required: true })
   message: string;
 
