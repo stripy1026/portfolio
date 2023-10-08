@@ -21,6 +21,9 @@ export const MessageForm = () => {
     await createMessageAction({ name, title, message, path: "/" });
     setIsOK(true);
     setIsSubmit(true);
+    setName("");
+    setTitle("");
+    setMessage("");
   };
 
   return (
