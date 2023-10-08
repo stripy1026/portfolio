@@ -4,12 +4,14 @@ import { getMessages } from "lib/messages-db";
 export default async function Admin() {
   const { messages } = await getMessages();
 
-  console.log(messages);
+  messages?.reverse();
 
   return (
-    <div>
+    <div className="min-h-screen">
       <span>ADMIN PAGE</span>
-      <Mail />
+      {messages?.map((mail) => (
+        <Mail key={mail.id} mail={mail} createdAt={mail.createdAt} />
+      ))}
     </div>
   );
 }
