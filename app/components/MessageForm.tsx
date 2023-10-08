@@ -11,15 +11,28 @@ export const MessageForm = () => {
   const [isOK, setIsOK] = useState(true);
   const [isSubmit, setIsSubmit] = useState(false);
 
-  const submitMessage = () => {
+  const submitMessage = async () => {
     if (!name || !title || !message) {
       setIsOK(false);
       setIsSubmit(false);
       return;
     }
-    console.log(name, title, message);
-    setIsOK(true);
-    setIsSubmit(true);
+    try {
+      const response = await fetch(`api/postMessages`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ name, title, message }),
+      });
+      const { success, err } = await response.json();
+      const errorCode = response.ok ? 0 : response.status;
+      if (errorCode) return <div>ErrorPage</div>;
+      setIsOK(true);
+      setIsSubmit(true);
+    } catch (e) {
+      return <div>ErrorPage</div>;
+    }
   };
 
   return (
