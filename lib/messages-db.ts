@@ -22,8 +22,7 @@ export async function createMessage(
   try {
     await connectDB();
 
-    const date = new Date();
-    const result = await Message.create({ name, title, message, date });
+    const result = await Message.create({ name, title, message });
 
     return { result };
   } catch (e) {

@@ -39,6 +39,8 @@ class MessageClass {
 
   @prop({ required: true })
   title: string;
+
+  @prop({ required: true })
   message: string;
 
   _id: mongoose.Types.ObjectId | string;
