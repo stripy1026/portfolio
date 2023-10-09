@@ -2,7 +2,7 @@ import { faBackspace } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
-import { ScrollImage } from "./ScrollImage";
+import { Detail } from "./Detail";
 
 export default function Transcendence() {
   return (
@@ -55,7 +55,7 @@ export default function Transcendence() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <div className="border-b-2 p-4 mb-10 flex flex-col items-center bg-black/40 w-full">
+          <div className="border-b-2 p-4 flex flex-col items-center bg-black/40 w-full">
             <p>
               고전게임 &quot;핑퐁&quot; 채널, 채팅 채널이 있는 웹 게임
               페이지입니다.
@@ -65,32 +65,7 @@ export default function Transcendence() {
               <span>그 중에서도 프로필 페이지 부분 제작을 맡았습니다.</span>
             </div>
           </div>
-          <div className="flex justify-center xl:hidden">
-            <ScrollImage />
-          </div>
-          <div className="flex justify-center max-[1280px]:hidden">
-            <div className="relative w-[400px] h-[320px]">
-              <Image
-                src="/transcendence/transcendence_1.png"
-                alt="img1"
-                fill={true}
-              />
-            </div>
-            <div className="relative w-[400px] h-[320px]">
-              <Image
-                src="/transcendence/transcendence_2.png"
-                alt="img1"
-                fill={true}
-              />
-            </div>
-            <div className="relative w-[400px] h-[320px]">
-              <Image
-                src="/transcendence/transcendence_3.png"
-                alt="img1"
-                fill={true}
-              />
-            </div>
-          </div>
+          <Detail />
         </div>
       </section>
     </main>
