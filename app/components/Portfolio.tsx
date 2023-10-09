@@ -13,31 +13,7 @@ export const Portfolio = () => {
           imageSrc="/transcendence_1.png"
           title="transcendence"
           language="React / node.js"
-        />
-        <EachPortfoilo
-          imageSrc="/transcendence_1.png"
-          title="transcendence"
-          language="React / node.js"
-        />
-        <EachPortfoilo
-          imageSrc="/transcendence_1.png"
-          title="transcendence"
-          language="React / node.js"
-        />
-        <EachPortfoilo
-          imageSrc="/transcendence_1.png"
-          title="transcendence"
-          language="React / node.js"
-        />
-        <EachPortfoilo
-          imageSrc="/transcendence_1.png"
-          title="transcendence"
-          language="React / node.js"
-        />
-        <EachPortfoilo
-          imageSrc="/transcendence_1.png"
-          title="transcendence"
-          language="React / node.js"
+          href="/transcendence"
         />
       </div>
     </main>
