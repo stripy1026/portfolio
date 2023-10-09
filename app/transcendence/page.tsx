@@ -1,4 +1,7 @@
+import { faBackspace } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Transcendence() {
   return (
@@ -11,13 +14,16 @@ export default function Transcendence() {
         />
       </section>
       <section className="relative bottom-full">
-        <div className="w-full bg-black py-5 pl-20">
+        <div className="w-full bg-black py-5 pl-20 flex justify-between items-center">
           <Image
             src="/transcendence/logo.png"
             alt="logo"
             width={200}
             height={100}
           />
+          <Link className="mr-16 text-4xl" href="/#portfolio">
+            <FontAwesomeIcon icon={faBackspace} />
+          </Link>
         </div>
         <div className="w-full bg-black/60">
           <div className="responsive flex justify-around items-center">
