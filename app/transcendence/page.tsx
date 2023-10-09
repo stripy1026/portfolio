@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { Detail } from "./Detail";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Transcendence() {
   return (
@@ -16,12 +17,29 @@ export default function Transcendence() {
       </section>
       <section className="relative bottom-full">
         <div className="w-full bg-black py-5 pl-20 flex justify-between items-center">
-          <Image
-            src="/transcendence/logo.png"
-            alt="logo"
-            width={200}
-            height={100}
-          />
+          <div className="flex">
+            <Link
+              href="https://transcendence.42world.kr/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src="/transcendence/logo.png"
+                alt="logo"
+                width={200}
+                height={100}
+              />
+            </Link>
+            <Link
+              href="https://github.com/42Blank/ft_transcendence"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="text-4xl mt-2 ml-5">
+                <FontAwesomeIcon icon={faGithub} />
+              </div>
+            </Link>
+          </div>
           <Link className="mr-16 text-4xl" href="/#portfolio">
             <FontAwesomeIcon icon={faBackspace} />
           </Link>
