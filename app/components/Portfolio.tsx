@@ -10,9 +10,9 @@ export const Portfolio = () => {
       </div>
       <div className="flex flex-col justify-center items-center mb-20 mx-20  xl:flex-row xl:flex-wrap">
         <EachPortfoilo
-          imageSrc="/transcendence_1.png"
+          imageSrc="/transcendence/transcendence_1.png"
           title="transcendence"
-          language="React / node.js"
+          language="React / Nest.js"
           href="/transcendence"
         />
       </div>
