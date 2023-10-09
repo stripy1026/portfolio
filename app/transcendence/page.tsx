@@ -2,6 +2,7 @@ import { faBackspace } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollImage } from "./ScrollImage";
 
 export default function Transcendence() {
   return (
@@ -64,22 +65,25 @@ export default function Transcendence() {
               <span>그 중에서도 프로필 페이지 부분 제작을 맡았습니다.</span>
             </div>
           </div>
-          <div className="flex max-[620px]:flex-col justify-center">
-            <div className="relative w-[200px] h-[160px] xl:w-[400px] xl:h-[320px]">
+          <div className="flex justify-center xl:hidden">
+            <ScrollImage />
+          </div>
+          <div className="flex justify-center max-[1280px]:hidden">
+            <div className="relative w-[400px] h-[320px]">
               <Image
                 src="/transcendence/transcendence_1.png"
                 alt="img1"
                 fill={true}
               />
             </div>
-            <div className="relative w-[200px] h-[160px] xl:w-[400px] xl:h-[320px]">
+            <div className="relative w-[400px] h-[320px]">
               <Image
                 src="/transcendence/transcendence_2.png"
                 alt="img1"
                 fill={true}
               />
             </div>
-            <div className="relative w-[200px] h-[160px] xl:w-[400px] xl:h-[320px]">
+            <div className="relative w-[400px] h-[320px]">
               <Image
                 src="/transcendence/transcendence_3.png"
                 alt="img1"
