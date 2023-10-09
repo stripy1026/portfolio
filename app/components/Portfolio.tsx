@@ -15,6 +15,12 @@ export const Portfolio = () => {
           language="React / Nest.js"
           href="/transcendence"
         />
+        <EachPortfoilo
+          imageSrc="/wakQuote/wakQuote_main.png"
+          title="우왁굳 명언 아카이브"
+          language="Next.js"
+          href="/transcendence"
+        />
       </div>
     </main>
   );
