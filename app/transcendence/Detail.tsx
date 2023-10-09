@@ -27,7 +27,7 @@ export const Detail = () => {
           <div className="flex justify-center xl:hidden">
             <ScrollImage />
           </div>
-          <div className="flex justify-center max-[1280px]:hidden">
+          <div className="flex justify-center max-[1279px]:hidden">
             <div className="relative w-[400px] h-[320px]">
               <Image
                 src="/transcendence/transcendence_1.png"

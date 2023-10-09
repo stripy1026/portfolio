@@ -55,6 +55,32 @@ export default function WakQuote() {
             </div>
           </div>
         </div>
+        <div className="max-[1279px]:hidden mt-10 flex">
+          <div className="mx-5">
+            <Image
+              src="/wakQuote/wakQuote_main.png"
+              alt="img1"
+              width={300}
+              height={220}
+            />
+          </div>
+          <div className="mx-5">
+            <Image
+              src="/wakQuote/wakQuote_ranking.png"
+              alt="img1"
+              width={300}
+              height={220}
+            />
+          </div>
+          <div className="mx-5">
+            <Image
+              src="/wakQuote/wakQuote_profile.png"
+              alt="img1"
+              width={300}
+              height={220}
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
