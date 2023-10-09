@@ -38,14 +38,14 @@ export const Detail = () => {
             <div className="relative w-[400px] h-[320px]">
               <Image
                 src="/transcendence/transcendence_2.png"
-                alt="img1"
+                alt="img2"
                 fill={true}
               />
             </div>
             <div className="relative w-[400px] h-[320px]">
               <Image
                 src="/transcendence/transcendence_3.png"
-                alt="img1"
+                alt="img3"
                 fill={true}
               />
             </div>
