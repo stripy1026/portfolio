@@ -54,25 +54,32 @@ export default function Transcendence() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <div className="border-b-2 p-4 mb-10">
-            <p>트랜센던스 설명</p>
+          <div className="border-b-2 p-4 mb-10 flex flex-col items-center bg-black/40 w-full">
+            <p>
+              고전게임 &quot;핑퐁&quot; 채널, 채팅 채널이 있는 웹 게임
+              페이지입니다.
+            </p>
+            <div className="max-[530px]:flex max-[530px]:flex-col items-center">
+              <span>저는 프론트엔드,</span>
+              <span>그 중에서도 프로필 페이지 부분 제작을 맡았습니다.</span>
+            </div>
           </div>
           <div className="flex max-[620px]:flex-col justify-center">
-            <div className="relative w-[200px] h-[160px] xl:w-[300px] xl:h-[240px]">
+            <div className="relative w-[200px] h-[160px] xl:w-[400px] xl:h-[320px]">
               <Image
                 src="/transcendence/transcendence_1.png"
                 alt="img1"
                 fill={true}
               />
             </div>
-            <div className="relative w-[200px] h-[160px] xl:w-[300px] xl:h-[240px]">
+            <div className="relative w-[200px] h-[160px] xl:w-[400px] xl:h-[320px]">
               <Image
                 src="/transcendence/transcendence_2.png"
                 alt="img1"
                 fill={true}
               />
             </div>
-            <div className="relative w-[200px] h-[160px] xl:w-[300px] xl:h-[240px]">
+            <div className="relative w-[200px] h-[160px] xl:w-[400px] xl:h-[320px]">
               <Image
                 src="/transcendence/transcendence_3.png"
                 alt="img1"
