@@ -18,15 +18,13 @@ export const EachPortfoilo = ({
   href,
 }: EachPortfolioProps) => {
   // 개별 페이지 이동 버튼
-  const IMAGE_WIDTH = 400;
-  const IMAGE_HEIGHT = 312;
 
   const [isDetail, setIsDetail] = useState(false);
 
   return (
     <button onClick={() => setIsDetail((prev) => !prev)}>
       {isDetail ? (
-        <div className="w-[400px] h-[312px] flex flex-col items-center border-dashed border-2 border-rose-700">
+        <div className="w-[400px] h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700">
           <span className="text-2xl font-bold mt-20">{title}</span>
           <span className="text-rose-600">{language}</span>
           <Link
@@ -37,12 +35,9 @@ export const EachPortfoilo = ({
           </Link>
         </div>
       ) : (
-        <Image
-          src={imageSrc}
-          alt={title}
-          width={IMAGE_WIDTH}
-          height={IMAGE_HEIGHT}
-        />
+        <div className="w-[400px] h-[320px] relative">
+          <Image src={imageSrc} alt={title} fill={true} />
+        </div>
       )}
     </button>
   );
