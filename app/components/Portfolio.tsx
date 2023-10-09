@@ -19,7 +19,7 @@ export const Portfolio = () => {
           imageSrc="/wakQuote/wakQuote_main.png"
           title="우왁굳 명언 아카이브"
           language="Next.js"
-          href="/transcendence"
+          href="/wakQuote"
         />
       </div>
     </main>
