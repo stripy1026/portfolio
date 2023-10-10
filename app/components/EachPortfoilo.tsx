@@ -24,7 +24,7 @@ export const EachPortfoilo = ({
   return (
     <button onClick={() => setIsDetail((prev) => !prev)}>
       {isDetail ? (
-        <div className="w-[400px] h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700">
+        <div className="w-[400px] h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700 animate-flip">
           <span className="text-2xl font-bold mt-20">{title}</span>
           <span className="text-rose-600">{language}</span>
           <Link
