@@ -82,52 +82,23 @@ export const DetailWak = () => {
               />
             </button>
           </div>
-          <div className="max-[1279px]:hidden my-10 flex">
-            <div className="relative w-[300px] h-[220px] mx-5">
-              <Image src="/wakQuote/wakQuote_main.png" alt="img1" fill={true} />
-            </div>
-            <div className="relative w-[300px] h-[220px] mx-5">
-              <Image
-                src="/wakQuote/wakQuote_ranking.png"
-                alt="img2"
-                fill={true}
-              />
-            </div>
-            <div className="relative w-[300px] h-[220px] mx-5">
-              <Image
-                src="/wakQuote/wakQuote_profile.png"
-                alt="img3"
-                fill={true}
-              />
-            </div>
-          </div>
         </div>
       ) : (
-        <div>
-          <div className="max-[1279px]:hidden my-10 flex">
-            <div className="relative w-[300px] h-[220px] mx-5">
-              <Image src="/wakQuote/wakQuote_main.png" alt="img1" fill={true} />
-            </div>
-            <div className="relative w-[300px] h-[220px] mx-5">
-              <Image
-                src="/wakQuote/wakQuote_ranking.png"
-                alt="img2"
-                fill={true}
-              />
-            </div>
-            <div className="relative w-[300px] h-[220px] mx-5">
-              <Image
-                src="/wakQuote/wakQuote_profile.png"
-                alt="img3"
-                fill={true}
-              />
-            </div>
-          </div>
-          <div className="relative -left-10 mb-10  xl:hidden">
-            <RegretWak />
-          </div>
+        <div className="relative -left-10 mb-10 xl:hidden">
+          <RegretWak />
         </div>
       )}
+      <div className="max-[1279px]:hidden my-10 flex">
+        <div className="relative w-[300px] h-[220px] mx-5">
+          <Image src="/wakQuote/wakQuote_main.png" alt="img1" fill={true} />
+        </div>
+        <div className="relative w-[300px] h-[220px] mx-5">
+          <Image src="/wakQuote/wakQuote_ranking.png" alt="img2" fill={true} />
+        </div>
+        <div className="relative w-[300px] h-[220px] mx-5">
+          <Image src="/wakQuote/wakQuote_profile.png" alt="img3" fill={true} />
+        </div>
+      </div>
     </div>
   );
 };
