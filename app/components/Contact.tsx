@@ -17,7 +17,7 @@ export const Contact = () => {
         </span>
       </div>
       <div className="flex flex-col items-center w-full mt-10">
-        <div className="flex flex-col flex-grow items-center border-2 rounded-xl my-5 min-w-[400px]">
+        <div className="flex flex-col flex-grow items-center border-2 rounded-xl my-5 min-w-[300px] md:min-w-[400px]">
           <span className="my-1 mt-5">
             <FontAwesomeIcon icon={faPhone} /> 010-6404-7317
           </span>
