@@ -21,6 +21,12 @@ export const Portfolio = () => {
           language="Next.js"
           href="/wakQuote"
         />
+        <EachPortfoilo
+          imageSrc="/wakJot/wakJot_main.png"
+          title="왁JOT"
+          language="React Native"
+          href="/wakJot"
+        />
       </div>
     </main>
   );
