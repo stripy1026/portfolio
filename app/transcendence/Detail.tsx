@@ -52,7 +52,7 @@ export const Detail = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-black/20 p-10 flex flex-col items-center border-b-2 animate-flip">
+        <div className="bg-black/20 p-10 flex flex-col items-center border-b-2 animate-fadeDown">
           <p>프로젝트 시작 : 2023/01/15</p>
           <p>프로젝트 완료 : 2023/03/03</p>
           <p className="mb-5">

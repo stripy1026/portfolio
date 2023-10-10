@@ -17,11 +17,16 @@ const config: Config = {
         fadeInSlowly: "fadeIn 5s ease-in",
         fadeIn: "fadeIn 1s ease-in-out",
         flip: "flip 300ms cubic-bezier(0,1,0,.71)",
+        fadeDown: "fadeDown 500ms ease-in-out",
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        fadeDown: {
+          from: { transform: "translateY(-10%)" },
+          to: { transform: "translateY(0%)" },
         },
         flip: {
           from: {
