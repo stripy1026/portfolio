@@ -15,7 +15,7 @@ export default function Transcendence() {
           fill={true}
         />
       </section>
-      <section className="relative bottom-full">
+      <section className="relative bottom-full animate-fadeIn">
         <div className="w-full bg-black py-5 pl-20 flex justify-between items-center">
           <div className="flex">
             <Link

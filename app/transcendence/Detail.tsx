@@ -23,7 +23,7 @@ export const Detail = () => {
         </button>
       </div>
       {isImage ? (
-        <div className="mt-10">
+        <div className="mt-10 animate-fadeIn">
           <div className="flex justify-center xl:hidden">
             <ScrollImage />
           </div>
@@ -52,7 +52,7 @@ export const Detail = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-black/20 p-10 flex flex-col items-center border-b-2">
+        <div className="bg-black/20 p-10 flex flex-col items-center border-b-2 animate-flip">
           <p>프로젝트 시작 : 2023/01/15</p>
           <p>프로젝트 완료 : 2023/03/03</p>
           <p className="mb-5">

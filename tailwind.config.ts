@@ -15,6 +15,7 @@ const config: Config = {
       },
       animation: {
         fadeInSlowly: "fadeIn 5s ease-in",
+        fadeIn: "fadeIn 1s ease-in-out",
         flip: "flip 300ms cubic-bezier(0,1,0,.71)",
       },
       keyframes: {
