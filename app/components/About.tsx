@@ -3,7 +3,7 @@ import { calculateDayPassed } from "@/utils/calculateDayPassed";
 import { AboutCards } from "./AboutCards";
 
 const SVG_SIZE = 72;
-const SVG_SMALL_SIZE = 40;
+const SVG_SMALL_SIZE = 20;
 const C_DAY = new Date(2021, 4, 3);
 const CPP_DAY = new Date(2022, 3, 7);
 const HTML_DAY = new Date(2022, 12, 28);
@@ -34,7 +34,7 @@ export const About = () => {
         </span>
       </div>
       <AboutCards />
-      <section className="flex min-[720px]:hidden mt-5 mx-10 justify-around">
+      <section className="flex md:hidden mt-5 mx-10 justify-around">
         <Image
           className="m-1"
           src="C.svg"
@@ -99,8 +99,8 @@ export const About = () => {
           height={SVG_SMALL_SIZE}
         />
       </section>
-      <div className="max-[720px]:block flex m-10 justify-center xl:flex-col  xl:w-full xl:items-center">
-        <section className="flex flex-col m-5 w-1/2  max-[720px]:hidden xl:flex-row xl:w-full xl:justify-center xl:mb-10">
+      <div className="block md:flex m-10 justify-center xl:flex-col  xl:w-full xl:items-center">
+        <section className="hidden md:flex flex-col m-5 w-1/2 xl:flex-row xl:w-full xl:justify-center xl:mb-10">
           <div className="xl:flex">
             <div className="flex">
               <Image
@@ -175,14 +175,14 @@ export const About = () => {
             />
           </div>
         </section>
-        <section className="flex-col w-1/2 max-[720px]:w-full xl:hidden">
+        <section className="flex-col w-full md:w-1/2 xl:hidden">
           {DAYS.map(({ day, name }) => (
-            <div key={name} className="flex my-2 max-[720px]:my-1">
-              <div className="bg-rose-700 flex justify-center min-w-[150px] min-h-[40px] max-[720px]:min-h-[30px]  items-center">
-                <span className="text-xl max-[720px]:text-sm">{name}</span>
+            <div key={name} className="flex my-1 md:my-2">
+              <div className="bg-rose-700 flex justify-center min-w-[150px]  min-h-[30px] md:min-h-[40px] items-center">
+                <span className="text-sm md:text-xl">{name}</span>
               </div>
-              <div className="bg-rose-900 flex justify-center flex-grow min-h-[40px] max-[720px]:min-h-[30px] items-center">
-                <span className="text-xl max-[720px]:text-sm">{day}일</span>
+              <div className="bg-rose-900 flex justify-center flex-grow min-h-[30px] md:min-h-[40px] items-center">
+                <span className="text-sm md:text-xl">{day}일</span>
               </div>
             </div>
           ))}
@@ -221,7 +221,7 @@ export const About = () => {
               재미있었습니다.
             </p>
           </section>
-          <section className="flex-col w-1/2 max-[720px]:w-full">
+          <section className="flex-col w-1/2">
             {DAYS.map(({ day, name }) => (
               <div key={name} className="flex my-2">
                 <div className="bg-rose-700 flex justify-center min-w-[150px] min-h-[40px] items-center">
@@ -235,7 +235,7 @@ export const About = () => {
           </section>
         </div>
       </div>
-      <section className="text-center m-10 xl:hidden max-[720px]:text-sm">
+      <section className="text-center m-10 xl:hidden text-sm">
         <p className="mb-5">
           <a
             target="_blank"
