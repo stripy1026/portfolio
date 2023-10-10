@@ -36,7 +36,7 @@ export default function WakQuote() {
           <FontAwesomeIcon icon={faBackspace} />
         </Link>
       </section>
-      <section className="flex flex-col items-center mt-10">
+      <section className="flex flex-col items-center mt-10 animate-fadeIn">
         <h1 className="font-black text-5xl mb-10">우왁굳 명언 아카이브</h1>
         <div className="flex max-[640px]:hidden">
           <div className="relative w-[640px] h-[360px]">

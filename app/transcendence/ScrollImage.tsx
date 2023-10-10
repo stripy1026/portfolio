@@ -26,7 +26,7 @@ export const ScrollImage = () => {
       </button>
       <div>
         {scrollNumber === 0 && (
-          <div className="relative w-[400px] h-[320px]">
+          <div className="relative w-[400px] h-[320px] animate-flip">
             <Image
               src="/transcendence/transcendence_1.png"
               alt="img1"
@@ -35,7 +35,7 @@ export const ScrollImage = () => {
           </div>
         )}
         {scrollNumber === 1 && (
-          <div className="relative w-[400px] h-[320px]">
+          <div className="relative w-[400px] h-[320px] animate-flip">
             <Image
               src="/transcendence/transcendence_2.png"
               alt="img1"
@@ -44,7 +44,7 @@ export const ScrollImage = () => {
           </div>
         )}
         {scrollNumber === 2 && (
-          <div className="relative w-[400px] h-[320px]">
+          <div className="relative w-[400px] h-[320px] animate-flip">
             <Image
               src="/transcendence/transcendence_3.png"
               alt="img1"
