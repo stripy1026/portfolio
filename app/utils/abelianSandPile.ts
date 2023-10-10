@@ -1,10 +1,7 @@
 const TOPPLE_SIZE = 1;
-const INITIAL_TOPPLE_VELOCITY = 1000;
 const MINIMUM_TOPPLE_VELOCITY = 10;
-const BRIGHT_RATIO = 1;
 const TOPPLE_WEIGHT = 1;
 const CRITICAL_LEVEL = 4;
-const BURST_RATIO = 8;
 
 export interface IAbelianSandpile {
   isStable: () => boolean;
@@ -17,7 +14,12 @@ export interface IAbelianSandpile {
 export class AbelianSandpile implements IAbelianSandpile {
   private WIDTH: number;
   private HEIGHT: number;
+
   private MAXIMUM_EXPLODE_RANGE: number;
+  private INITIAL_TOPPLE_VELOCITY: number;
+  private BRIGHT_RATIO: number;
+  private BURST_RATIO: number;
+
   private MAX_STACK_SIZE: number;
   private randomX: number;
   private randomY: number;
@@ -32,12 +34,17 @@ export class AbelianSandpile implements IAbelianSandpile {
     this.WIDTH = screenWidth;
     this.HEIGHT = screenHeight;
     this.MAX_STACK_SIZE = this.WIDTH * this.HEIGHT;
+
     this.MAXIMUM_EXPLODE_RANGE = this.WIDTH < 640 ? 2 : 4;
+    this.INITIAL_TOPPLE_VELOCITY = this.WIDTH < 640 ? 400 : 1000;
+    this.BRIGHT_RATIO = this.WIDTH < 640 ? 8 : 1;
+    this.BURST_RATIO = this.WIDTH < 640 ? 1 : 8;
+
     this.randomX = 0;
     this.randomY = 0;
     this.randomDistribute = 0;
 
-    this.toppleVelocity = INITIAL_TOPPLE_VELOCITY;
+    this.toppleVelocity = this.INITIAL_TOPPLE_VELOCITY;
 
     this.sandbox = Array.from(Array(this.WIDTH), () =>
       Array(this.HEIGHT).fill(0)
@@ -55,9 +62,9 @@ export class AbelianSandpile implements IAbelianSandpile {
     if (level < 0) {
       ctx.fillStyle = "rgb(0, 0, 0)";
     } else {
-      ctx.fillStyle = `rgb(${level * BRIGHT_RATIO}, ${level * BRIGHT_RATIO}, ${
-        level * BRIGHT_RATIO
-      })`;
+      ctx.fillStyle = `rgb(${level * this.BRIGHT_RATIO}, ${
+        level * this.BRIGHT_RATIO
+      }, ${level * this.BRIGHT_RATIO})`;
     }
     ctx.fillRect(
       posX * TOPPLE_SIZE,
@@ -146,7 +153,7 @@ export class AbelianSandpile implements IAbelianSandpile {
         if (!this.sandbox[dx[i]]) {
           return;
         }
-        this.sandbox[dx[i]][dy[i]] += CRITICAL_LEVEL * BURST_RATIO;
+        this.sandbox[dx[i]][dy[i]] += CRITICAL_LEVEL * this.BURST_RATIO;
         this.drawLevel(ctx, dx[i], dy[i], this.sandbox[dx[i]][dy[i]]);
         if (
           !this.isStackFull() &&
@@ -157,7 +164,7 @@ export class AbelianSandpile implements IAbelianSandpile {
       }
     }
     this.sandbox[topX][topY] -=
-      CRITICAL_LEVEL * this.MAXIMUM_EXPLODE_RANGE * BURST_RATIO * 16;
+      CRITICAL_LEVEL * this.MAXIMUM_EXPLODE_RANGE * this.BURST_RATIO * 16;
     this.unstableList.splice(this.randomDistribute, 1);
     this.drawLevel(ctx, topX, topY, this.sandbox[topX][topY]);
   }
