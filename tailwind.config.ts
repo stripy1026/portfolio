@@ -13,11 +13,22 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      animation: { fadeInSlowly: "fadeIn 5s ease-in" },
+      animation: {
+        fadeInSlowly: "fadeIn 5s ease-in",
+        flip: "flip 300ms linear",
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        flip: {
+          from: {
+            transform: "rotateY(180deg)",
+          },
+          to: {
+            transform: "rotateY(0deg)",
+          },
         },
       },
     },

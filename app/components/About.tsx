@@ -43,7 +43,7 @@ export const About = () => {
         </span>
       </div>
       <section className="flex w-full justify-around min-h-[400px] max-[720px]:min-h-[200px]">
-        <div className="p-2 w-5/12 border-2 rounded-xl flex flex-col items-center">
+        <div className="p-2 w-5/12 border-2 rounded-xl flex flex-col items-center animate-flip">
           <div id="pentagon" className="mt-10 max-[720px]:mt-5">
             <div className="text-7xl m-10">
               <FontAwesomeIcon icon={faUser} />
