@@ -28,12 +28,12 @@ const DAYS = [
 export const About = () => {
   return (
     <main id="about" className="responsive mb-10">
-      <div className="m-20 flex justify-center">
+      <div className="m-10 md:m-20 flex justify-center">
         <span className="text-rose-700 font-bold text-5xl underline">
           ABOUT
         </span>
       </div>
-        <AboutCards />
+      <AboutCards />
       <section className="flex min-[720px]:hidden mt-5 mx-10 justify-around">
         <Image
           className="m-1"
