@@ -4,10 +4,7 @@ const MINIMUM_TOPPLE_VELOCITY = 10;
 const BRIGHT_RATIO = 1;
 const TOPPLE_WEIGHT = 1;
 const CRITICAL_LEVEL = 4;
-const MAXIMUM_EXPLODE_RANGE = 4;
 const BURST_RATIO = 8;
-
-// INITIAL TOPPLE VELOCITY must be changed depends on screen size
 
 export interface IAbelianSandpile {
   isStable: () => boolean;
@@ -20,6 +17,7 @@ export interface IAbelianSandpile {
 export class AbelianSandpile implements IAbelianSandpile {
   private WIDTH: number;
   private HEIGHT: number;
+  private MAXIMUM_EXPLODE_RANGE: number;
   private MAX_STACK_SIZE: number;
   private randomX: number;
   private randomY: number;
@@ -34,6 +32,7 @@ export class AbelianSandpile implements IAbelianSandpile {
     this.WIDTH = screenWidth;
     this.HEIGHT = screenHeight;
     this.MAX_STACK_SIZE = this.WIDTH * this.HEIGHT;
+    this.MAXIMUM_EXPLODE_RANGE = this.WIDTH < 640 ? 2 : 4;
     this.randomX = 0;
     this.randomY = 0;
     this.randomDistribute = 0;
@@ -118,7 +117,7 @@ export class AbelianSandpile implements IAbelianSandpile {
 
     for (
       let explodeRange = 1;
-      explodeRange < MAXIMUM_EXPLODE_RANGE;
+      explodeRange < this.MAXIMUM_EXPLODE_RANGE;
       ++explodeRange
     ) {
       const dx = [
@@ -158,7 +157,7 @@ export class AbelianSandpile implements IAbelianSandpile {
       }
     }
     this.sandbox[topX][topY] -=
-      CRITICAL_LEVEL * MAXIMUM_EXPLODE_RANGE * BURST_RATIO * 16;
+      CRITICAL_LEVEL * this.MAXIMUM_EXPLODE_RANGE * BURST_RATIO * 16;
     this.unstableList.splice(this.randomDistribute, 1);
     this.drawLevel(ctx, topX, topY, this.sandbox[topX][topY]);
   }
