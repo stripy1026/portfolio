@@ -39,7 +39,7 @@ export const DetailWak = () => {
             </button>
             <div>
               {scrollNumber === 0 && (
-                <div className="relative w-[300px] h-[220px]">
+                <div className="relative w-[300px] h-[220px] animate-flip">
                   <Image
                     src="/wakQuote/wakQuote_main.png"
                     alt="img1"
@@ -48,7 +48,7 @@ export const DetailWak = () => {
                 </div>
               )}
               {scrollNumber === 1 && (
-                <div className="relative w-[300px] h-[220px]">
+                <div className="relative w-[300px] h-[220px] animate-flip">
                   <Image
                     src="/wakQuote/wakQuote_ranking.png"
                     alt="img2"
@@ -57,7 +57,7 @@ export const DetailWak = () => {
                 </div>
               )}
               {scrollNumber === 2 && (
-                <div className="relative w-[300px] h-[220px]">
+                <div className="relative w-[300px] h-[220px] animate-flip">
                   <Image
                     src="/wakQuote/wakQuote_profile.png"
                     alt="img3"
@@ -103,8 +103,29 @@ export const DetailWak = () => {
           </div>
         </div>
       ) : (
-        <div className="relative -left-10 mb-10">
-          <RegretWak />
+        <div>
+          <div className="max-[1279px]:hidden my-10 flex">
+            <div className="relative w-[300px] h-[220px] mx-5">
+              <Image src="/wakQuote/wakQuote_main.png" alt="img1" fill={true} />
+            </div>
+            <div className="relative w-[300px] h-[220px] mx-5">
+              <Image
+                src="/wakQuote/wakQuote_ranking.png"
+                alt="img2"
+                fill={true}
+              />
+            </div>
+            <div className="relative w-[300px] h-[220px] mx-5">
+              <Image
+                src="/wakQuote/wakQuote_profile.png"
+                alt="img3"
+                fill={true}
+              />
+            </div>
+          </div>
+          <div className="relative -left-10 mb-10  xl:hidden">
+            <RegretWak />
+          </div>
         </div>
       )}
     </div>

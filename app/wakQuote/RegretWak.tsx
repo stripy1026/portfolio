@@ -9,12 +9,12 @@ export const RegretWak = () => {
       <button onClick={() => setIsShow((prev) => !prev)}>
         <div className="ml-20 flex flex-col items-center  max-w-[400px]">
           {!isShow && (
-            <div className="w-[400px] h-[376px] flex items-center justify-center">
+            <div className="w-[400px] h-[376px] flex items-center justify-center animate-pulse">
               <span className="text-2xl font-bold text-blue-700">SEE MORE</span>
             </div>
           )}
           {isShow && (
-            <div className="p-10 border-2 border-dotted">
+            <div className="p-10 border-2 border-dotted animate-fadeIn">
               <p className="text-2xl font-bold mb-5">후회의 기록</p>
               <p>
                 나의 첫 웹 페이지를 만드는 팀 프로젝트가 끝나고, 처음으로
