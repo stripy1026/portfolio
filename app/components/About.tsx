@@ -2,8 +2,8 @@ import Image from "next/image";
 import { calculateDayPassed } from "@/utils/calculateDayPassed";
 import { AboutCards } from "./AboutCards";
 
-const SVG_SIZE = 72;
-const SVG_SMALL_SIZE = 20;
+const SVG_SIZE = 60;
+const SVG_SMALL_SIZE = 30;
 const C_DAY = new Date(2021, 4, 3);
 const CPP_DAY = new Date(2022, 3, 7);
 const HTML_DAY = new Date(2022, 12, 28);
@@ -28,13 +28,13 @@ const DAYS = [
 export const About = () => {
   return (
     <main id="about" className="responsive mb-10">
-      <div className="m-10 md:m-20 flex justify-center">
+      <div className="m-10 sm:m-20 flex justify-center">
         <span className="text-rose-700 font-bold text-5xl underline">
           ABOUT
         </span>
       </div>
       <AboutCards />
-      <section className="flex md:hidden mt-5 mx-10 justify-around">
+      <section className="flex sm:hidden mt-5 mx-10 justify-around">
         <Image
           className="m-1"
           src="C.svg"
@@ -99,8 +99,8 @@ export const About = () => {
           height={SVG_SMALL_SIZE}
         />
       </section>
-      <div className="block md:flex m-10 justify-center xl:flex-col  xl:w-full xl:items-center">
-        <section className="hidden md:flex flex-col m-5 w-1/2 xl:flex-row xl:w-full xl:justify-center xl:mb-10">
+      <div className="block sm:flex m-10 justify-center xl:flex-col  xl:w-full xl:items-center">
+        <section className="hidden sm:flex flex-col m-5 w-1/2 xl:flex-row xl:w-full xl:justify-center xl:mb-10">
           <div className="xl:flex">
             <div className="flex">
               <Image
@@ -175,14 +175,14 @@ export const About = () => {
             />
           </div>
         </section>
-        <section className="flex-col w-full md:w-1/2 xl:hidden">
+        <section className="flex-col w-full sm:w-1/2 xl:hidden">
           {DAYS.map(({ day, name }) => (
-            <div key={name} className="flex my-1 md:my-2">
-              <div className="bg-rose-700 flex justify-center min-w-[150px]  min-h-[30px] md:min-h-[40px] items-center">
-                <span className="text-sm md:text-xl">{name}</span>
+            <div key={name} className="flex my-1 sm:my-2">
+              <div className="bg-rose-700 flex justify-center min-w-[150px]  min-h-[30px] sm:min-h-[40px] items-center">
+                <span className="text-sm sm:text-xl">{name}</span>
               </div>
-              <div className="bg-rose-900 flex justify-center flex-grow min-h-[30px] md:min-h-[40px] items-center">
-                <span className="text-sm md:text-xl">{day}일</span>
+              <div className="bg-rose-900 flex justify-center flex-grow min-h-[30px] sm:min-h-[40px] items-center">
+                <span className="text-sm sm:text-xl">{day}일</span>
               </div>
             </div>
           ))}
