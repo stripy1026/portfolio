@@ -14,7 +14,7 @@ export const Intro = () => {
       <section className="relative">
         <BackgroundAnimation width={width} height={height} />
       </section>
-      <div className="relative bottom-full">
+      <div className="relative bottom-full animate-fadeInSlowly">
         <section className="flex flex-col items-center">
           <h1 className="mt-20 mb-2 text-slate-400 font-semibold">
             랜딩 페이지 시뮬레이션
@@ -28,7 +28,7 @@ export const Intro = () => {
           </h2>
         </section>
       </div>
-      <div className="relative bottom-2/3">
+      <div className="relative bottom-2/3 animate-fadeInSlowly">
         <section className="flex flex-col items-center">
           <h2 className="-mt-10 mb-2 text-4xl text-rose-700 font-extrabold">
             조인우
@@ -38,7 +38,7 @@ export const Intro = () => {
           </span>
         </section>
       </div>
-      <div className="relative bottom-1/2">
+      <div className="relative bottom-1/2 animate-fadeInSlowly">
         <section className="flex flex-col items-center">
           <Link
             className="-mt-20 mb-10 p-5 text-rose-700 text-xl font-semibold border-2 border-slate-400"
