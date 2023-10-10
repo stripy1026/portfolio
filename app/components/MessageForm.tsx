@@ -33,7 +33,7 @@ export const MessageForm = () => {
           <span>이름</span>
         </div>
         <input
-          className="bg-gray-900 md:min-w-[344px] px-2"
+          className="bg-gray-900 sm:min-w-[344px] px-2"
           maxLength={80}
           placeholder="80자 이하"
           value={name}
@@ -45,7 +45,7 @@ export const MessageForm = () => {
           <span>제목</span>
         </div>
         <input
-          className="bg-gray-900 md:min-w-[344px] px-2"
+          className="bg-gray-900 sm:min-w-[344px] px-2"
           maxLength={80}
           placeholder="80자 이하"
           value={title}
@@ -53,7 +53,7 @@ export const MessageForm = () => {
         />
       </div>
       <textarea
-        className="bg-gray-900 min-w-[292px] md:min-w-[400px] min-h-[200px] p-2"
+        className="bg-gray-900 min-w-[292px] sm:min-w-[400px] min-h-[200px] p-2"
         placeholder="메세지를 입력해주세요"
         maxLength={1000}
         value={message}
