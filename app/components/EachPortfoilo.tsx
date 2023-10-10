@@ -24,8 +24,8 @@ export const EachPortfoilo = ({
   return (
     <button onClick={() => setIsDetail((prev) => !prev)}>
       {isDetail ? (
-        <div className="w-[400px] h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700 animate-flip">
-          <span className="text-2xl font-bold mt-20">{title}</span>
+        <div className="w-[300px] h-[240px] md:w-[400px] md:h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700 animate-flip">
+          <span className="text-2xl font-bold mt-10 md:mt-20">{title}</span>
           <span className="text-rose-600">{language}</span>
           <Link
             className="border-2 p-2 border-slate-600 text-rose-700 mt-20"
@@ -35,7 +35,7 @@ export const EachPortfoilo = ({
           </Link>
         </div>
       ) : (
-        <div className="w-[400px] h-[320px] relative">
+        <div className="w-[300px] h-[240px] md:w-[400px] md:h-[320px] relative">
           <Image src={imageSrc} alt={title} fill={true} />
         </div>
       )}
