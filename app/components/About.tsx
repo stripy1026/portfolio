@@ -261,6 +261,7 @@ export const About = () => {
           핸드폰 어플리케이션을 개발하는 것도 비슷한 이유로 매우 재미있었습니다.
         </p>
       </section>
+      <div id="portfolio" />
     </main>
   );
 };

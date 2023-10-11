@@ -3,9 +3,9 @@ import { Title } from "./Title";
 
 export const Portfolio = () => {
   return (
-    <main id="portfolio" className="responsive min-h-full">
+    <main className="responsive min-h-full">
       <Title titleName="PORTFOLIO" />
-      <div className="flex flex-col justify-center items-center mb-20 mx-20  xl:flex-row xl:flex-wrap">
+      <div className="flex flex-col justify-center items-center m-20 xl:flex-row xl:flex-wrap">
         <EachPortfoilo
           imageSrc="/transcendence/transcendence_1.png"
           title="transcendence"
