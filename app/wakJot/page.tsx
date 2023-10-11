@@ -1,12 +1,18 @@
-import { faHelmetSafety } from "@fortawesome/free-solid-svg-icons";
+import { faBackspace, faHelmetSafety } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export default function WakJot() {
   return (
     <main className="h-screen">
       <div className="flex flex-col justify-center items-center">
         <div className="mt-20 flex flex-col items-center">
-          <p className="text-5xl font-black">WAKJOT</p>
+          <div className="flex items-center">
+            <p className="text-4xl font-black ml-10 mr-5">WAKJOT</p>
+            <Link className="mr-4 sm:mr-16 text-2xl" href="/#portfolio">
+              <FontAwesomeIcon icon={faBackspace} />
+            </Link>
+          </div>
           <FontAwesomeIcon
             className="text-9xl my-10 text-yellow-400"
             icon={faHelmetSafety}
