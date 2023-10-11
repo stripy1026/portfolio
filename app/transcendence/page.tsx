@@ -7,16 +7,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Transcendence() {
   return (
-    <main className="h-screen min-h-[920px]">
-      <section className="relative w-screen h-screen min-h-[920px]">
-        <Image
-          src="/transcendence/bg_gray.jpg"
-          alt="background image"
-          fill={true}
-        />
-      </section>
-      <section className="relative bottom-full animate-fadeIn">
-        <div className="w-full bg-black py-5 pl-20 flex justify-between items-center">
+    <main className="h-screen bg-[url('/transcendence/bg_gray.jpg')]">
+      <section className="bottom-full animate-fadeIn">
+        <div className="w-full bg-black pl-2 py-2 sm:py-5 sm:pl-20 flex justify-between items-center">
           <div className="flex">
             <Link
               href="https://transcendence.42world.kr/"
@@ -40,7 +33,7 @@ export default function Transcendence() {
               </div>
             </Link>
           </div>
-          <Link className="mr-16 text-4xl" href="/#portfolio">
+          <Link className="mr-4 sm:mr-16 text-4xl" href="/#portfolio">
             <FontAwesomeIcon icon={faBackspace} />
           </Link>
         </div>
