@@ -39,7 +39,7 @@ export const DetailWak = () => {
             </button>
             <div>
               {scrollNumber === 0 && (
-                <div className="relative w-[300px] h-[220px] animate-flip">
+                <div className="relative w-[200px] h-[150px] sm:w-[300px] sm:h-[220px] animate-flip">
                   <Image
                     src="/wakQuote/wakQuote_main.png"
                     alt="img1"
@@ -48,7 +48,7 @@ export const DetailWak = () => {
                 </div>
               )}
               {scrollNumber === 1 && (
-                <div className="relative w-[300px] h-[220px] animate-flip">
+                <div className="relative w-[200px] h-[150px] sm:w-[300px] sm:h-[220px] animate-flip">
                   <Image
                     src="/wakQuote/wakQuote_ranking.png"
                     alt="img2"
@@ -57,7 +57,7 @@ export const DetailWak = () => {
                 </div>
               )}
               {scrollNumber === 2 && (
-                <div className="relative w-[300px] h-[220px] animate-flip">
+                <div className="relative w-[200px] h-[150px] sm:w-[300px] sm:h-[220px] animate-flip">
                   <Image
                     src="/wakQuote/wakQuote_profile.png"
                     alt="img3"
@@ -88,7 +88,7 @@ export const DetailWak = () => {
           <RegretWak />
         </div>
       )}
-      <div className="max-[1279px]:hidden my-10 flex">
+      <div className="hidden my-10 xl:flex">
         <div className="relative w-[300px] h-[220px] mx-5">
           <Image src="/wakQuote/wakQuote_main.png" alt="img1" fill={true} />
         </div>
