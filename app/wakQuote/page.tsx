@@ -1,7 +1,6 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBackspace, faWifi } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Link from "next/link";
 import { DetailWak } from "./DetailWak";
 import { RegretWak } from "./RegretWak";
@@ -12,7 +11,7 @@ export default function WakQuote() {
       <section className="w-full bg-gray-900 py-3 sm:py-5 pl-5 sm:pl-20 flex justify-between items-center">
         <div className="flex">
           <Link
-            href="https://transcendence.42world.kr/"
+            href="https://wak-quotes.vercel.app/"
             target="_blank"
             rel="noreferrer"
           >
@@ -22,7 +21,7 @@ export default function WakQuote() {
             </div>
           </Link>
           <Link
-            href="https://github.com/42Blank/ft_transcendence"
+            href="https://github.com/stripy1026/wak-quotes"
             target="_blank"
             rel="noreferrer"
           >
