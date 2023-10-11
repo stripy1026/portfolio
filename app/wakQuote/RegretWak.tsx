@@ -14,7 +14,7 @@ export const RegretWak = () => {
             </div>
           )}
           {isShow && (
-            <div className="p-5 sm:p-10 border-2 border-dotted animate-fadeIn">
+            <div className="p-5 sm:p-10 bg-gray-800 rounded-xl animate-fadeIn">
               <p className="sm:text-2xl font-bold mb-5">후회의 기록</p>
               <div className="text-xs sm:text-base">
                 <p>
