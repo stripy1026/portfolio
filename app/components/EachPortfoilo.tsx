@@ -1,5 +1,6 @@
 "use client";
 
+import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -20,9 +21,10 @@ export const EachPortfoilo = ({
   // 개별 페이지 이동 버튼
 
   const [isDetail, setIsDetail] = useState(false);
+  const animateItem = useScrollFadeIn();
 
   return (
-    <button onClick={() => setIsDetail((prev) => !prev)}>
+    <button onClick={() => setIsDetail((prev) => !prev)} {...animateItem}>
       {isDetail ? (
         <div className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700 animate-flip">
           <span className="text-2xl font-bold mt-10 sm:mt-20">{title}</span>
