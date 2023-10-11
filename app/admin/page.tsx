@@ -1,4 +1,4 @@
-import { Mail } from "@/components/Mail";
+import { Mail } from "./Mail";
 import { getMessages } from "lib/messages-db";
 import Link from "next/link";
 
