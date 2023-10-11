@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { calculateDayPassed } from "@/utils/calculateDayPassed";
 import { AboutCards } from "./AboutCards";
+import { Title } from "./Title";
 
 const SVG_SIZE = 60;
 const SVG_SMALL_SIZE = 30;
@@ -28,11 +29,7 @@ const DAYS = [
 export const About = () => {
   return (
     <main id="about" className="responsive mb-10">
-      <div className="mt-20 mb-10 sm:mb-20 flex justify-center">
-        <span className="text-rose-700 font-bold text-5xl underline">
-          ABOUT
-        </span>
-      </div>
+      <Title titleName="ABOUT" />
       <AboutCards />
       <section className="flex sm:hidden mt-5 mx-10 justify-around">
         <Image

@@ -7,15 +7,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MessageForm } from "./MessageForm";
+import { Title } from "./Title";
 
 export const Contact = () => {
   return (
     <main id="contact" className="responsive  min-h-full">
-      <div className="mt-20 flex justify-center">
-        <span className="text-rose-700 font-bold text-5xl underline">
-          CONTACT
-        </span>
-      </div>
+      <Title titleName="CONTACT" />
       <div className="flex flex-col items-center w-full mt-10">
         <div className="flex flex-col flex-grow items-center border-2 rounded-xl my-5 min-w-[300px] sm:min-w-[400px]">
           <span className="my-1 mt-5">
