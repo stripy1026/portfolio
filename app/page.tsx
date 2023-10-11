@@ -12,9 +12,15 @@ export default function Page() {
       <main className="flex flex-col items-center">
         <div className="border-b-2 w-full" />
         <About />
-        <div className="border-t-2 w-full" />
+        <div className="w-full h-10 flex">
+          <div className="border-t-2 w-full skew-y-12 xl:skew-y-6" />
+          <div className="border-t-2 w-full -skew-y-12 xl:-skew-y-6" />
+        </div>
         <Portfolio />
-        <div className="border-t-2 w-full" />
+        <div className="w-full h-10 flex">
+          <div className="border-t-2 w-full skew-y-12 xl:skew-y-6" />
+          <div className="border-t-2 w-full -skew-y-12 xl:-skew-y-6" />
+        </div>
         <Contact />
       </main>
     </div>
