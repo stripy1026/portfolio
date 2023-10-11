@@ -27,7 +27,7 @@ export const Detail = () => {
           <div className="flex justify-center xl:hidden">
             <ScrollImage />
           </div>
-          <div className="flex justify-center max-[1279px]:hidden">
+          <div className="xl:flex justify-center hidden">
             <div className="relative w-[400px] h-[320px]">
               <Image
                 src="/transcendence/transcendence_1.png"
@@ -52,7 +52,7 @@ export const Detail = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-black/20 p-10 flex flex-col items-center border-b-2 animate-fadeDown">
+        <div className="bg-black/20 p-5 sm:p-10 flex flex-col items-center border-b-2 animate-fadeDown text-xs sm:text-base">
           <p>프로젝트 시작 : 2023/01/15</p>
           <p>프로젝트 완료 : 2023/03/03</p>
           <p className="mb-5">
