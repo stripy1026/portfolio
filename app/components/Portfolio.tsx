@@ -27,6 +27,12 @@ export const Portfolio = () => {
           language="React Native"
           href="/wakJot"
         />
+        <EachPortfoilo
+          imageSrc="/IsegyeUniverse/construction.svg"
+          title="이세계 유니버스"
+          language="Next.js / Express"
+          href="/IsegyeUniverse"
+        />
       </div>
     </main>
   );
