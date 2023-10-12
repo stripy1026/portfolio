@@ -56,9 +56,6 @@ export default function WakQuote() {
               </div>
             </div>
           </div>
-          <div className="hidden xl:block">
-            <RegretWak />
-          </div>
         </div>
         <DetailWak />
       </section>

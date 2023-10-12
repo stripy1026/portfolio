@@ -11,7 +11,7 @@ export const DetailWak = () => {
   const [isImg, setIsImg] = useState(true);
   return (
     <div>
-      <div className="xl:hidden my-5 flex justify-center">
+      <div className="my-5 flex justify-center">
         <button onClick={() => setIsImg(true)}>
           <span className="mr-10 underline">이미지</span>
         </button>
@@ -21,6 +21,25 @@ export const DetailWak = () => {
       </div>
       {isImg ? (
         <div>
+          <div className="hidden my-10 xl:flex">
+            <div className="relative w-[300px] h-[220px] mx-5">
+              <Image src="/wakQuote/wakQuote_main.png" alt="img1" fill={true} />
+            </div>
+            <div className="relative w-[300px] h-[220px] mx-5">
+              <Image
+                src="/wakQuote/wakQuote_ranking.png"
+                alt="img2"
+                fill={true}
+              />
+            </div>
+            <div className="relative w-[300px] h-[220px] mx-5">
+              <Image
+                src="/wakQuote/wakQuote_profile.png"
+                alt="img3"
+                fill={true}
+              />
+            </div>
+          </div>
           <div className="flex mb-10 xl:hidden">
             <button
               className="flex items-end mx-1"
@@ -84,21 +103,10 @@ export const DetailWak = () => {
           </div>
         </div>
       ) : (
-        <div className="relative -left-10 mb-10 xl:hidden">
+        <div className="mb-10 mx-5 responsive">
           <RegretWak />
         </div>
       )}
-      <div className="hidden my-10 xl:flex">
-        <div className="relative w-[300px] h-[220px] mx-5">
-          <Image src="/wakQuote/wakQuote_main.png" alt="img1" fill={true} />
-        </div>
-        <div className="relative w-[300px] h-[220px] mx-5">
-          <Image src="/wakQuote/wakQuote_ranking.png" alt="img2" fill={true} />
-        </div>
-        <div className="relative w-[300px] h-[220px] mx-5">
-          <Image src="/wakQuote/wakQuote_profile.png" alt="img3" fill={true} />
-        </div>
-      </div>
     </div>
   );
 };
