@@ -1,5 +1,5 @@
 import { useCanvas } from "@/hooks/useCanvas";
-import { AbelianSandpile, IAbelianSandpile } from "@/utils/AbelianSandpile";
+import { AbelianSandpile, IAbelianSandpile } from "@/utils/abelianSandPile";
 
 type BackgroundAnimationProps = {
   width: number;
