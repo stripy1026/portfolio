@@ -24,23 +24,25 @@ export const EachPortfoilo = ({
   const animateItem = useScrollFadeIn();
 
   return (
-    <button onClick={() => setIsDetail((prev) => !prev)} {...animateItem}>
-      {isDetail ? (
-        <div className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700 animate-flip">
-          <span className="text-2xl font-bold mt-10 sm:mt-20">{title}</span>
-          <span className="text-rose-600">{language}</span>
-          <Link
-            className="border-2 p-2 border-slate-600 text-rose-700 mt-20"
-            href={href}
-          >
-            SEE MORE
-          </Link>
-        </div>
-      ) : (
-        <div className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] relative">
-          <Image src={imageSrc} alt={title} fill={true} />
-        </div>
-      )}
-    </button>
+    <div {...animateItem}>
+      <button onClick={() => setIsDetail((prev) => !prev)}>
+        {isDetail ? (
+          <div className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] flex flex-col items-center border-dashed border-2 border-rose-700 animate-flip">
+            <span className="text-2xl font-bold mt-10 sm:mt-20">{title}</span>
+            <span className="text-rose-600">{language}</span>
+            <Link
+              className="border-2 p-2 border-slate-600 text-rose-700 mt-20"
+              href={href}
+            >
+              SEE MORE
+            </Link>
+          </div>
+        ) : (
+          <div className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] relative">
+            <Image src={imageSrc} alt={title} fill={true} />
+          </div>
+        )}
+      </button>
+    </div>
   );
 };
