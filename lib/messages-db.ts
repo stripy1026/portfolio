@@ -21,7 +21,7 @@ export async function createMessage(
 ) {
   try {
     await connectDB();
-    const date = new Date();
+    const date = new Date().toString();
 
     const result = await Message.create({ name, title, message, date });
 

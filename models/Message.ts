@@ -41,7 +41,7 @@ class MessageClass {
   @prop({ required: true })
   message: string;
   @prop({ required: true })
-  date: Date;
+  date: string;
 
   _id: mongoose.Types.ObjectId | string;
 
