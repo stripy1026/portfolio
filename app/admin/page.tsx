@@ -15,9 +15,7 @@ export default async function Admin({
       <h1>ADMIN PAGE</h1>
       <Link href="/">GO HOME</Link>
       {searchParams?.password === process.env.ADMIN_PASSWORD ? (
-        messages?.map((mail) => (
-          <Mail key={mail.id} mail={mail} createdAt={mail.createdAt} />
-        ))
+        messages?.map((mail) => <Mail key={mail.id} mail={mail} />)
       ) : (
         <p>INCORRECT PASSWORD</p>
       )}
