@@ -30,9 +30,9 @@ export const EachBlog = ({
         <div className="w-[300px] h-[120px] sm:w-[400px] sm:h-[160px] relative">
           <Image src={imageSrc} alt={title} fill={true} />
         </div>
-        <h3 className="mt-2 font-bold text-lg">{title}</h3>
-        <p className="text-xs">{createdDate}</p>
-        <p className="text-sm my-2">{description}</p>
+        <h3 className="mt-2 font-bold text-lg text-rose-700">{title}</h3>
+        <p className="text-xs text-gray-300">{createdDate}</p>
+        <p className="text-sm my-2 text-gray-300">{description}</p>
       </Link>
     </div>
   );
