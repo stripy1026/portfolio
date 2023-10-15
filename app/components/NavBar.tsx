@@ -12,6 +12,9 @@ export const NavBar = () => {
       <Link className="px-2 sm:px-5" href="#portfolio">
         PORTFOLIO
       </Link>
+      <Link className="px-2 sm:px-5" href="#blog">
+        BLOG
+      </Link>
       <Link className="px-2 sm:px-5" href="#contact">
         CONTACT
       </Link>

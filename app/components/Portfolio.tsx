@@ -31,6 +31,7 @@ export const Portfolio = () => {
           href="/IsegyeUniverse"
         />
       </div>
+      <div id="blog" />
     </main>
   );
 };
