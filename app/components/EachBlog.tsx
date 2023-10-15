@@ -1,17 +1,36 @@
 "use client";
 
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
+import Image from "next/image";
+import Link from "next/link";
 
-type EachBlogProps = {};
+type EachBlogProps = {
+  imageSrc: string;
+  title: string;
+  createdDate: string;
+  description: string;
+  href: string;
+};
 
-export const EachBlog = ({}: EachBlogProps) => {
+export const EachBlog = ({
+  imageSrc,
+  title,
+  createdDate,
+  description,
+  href,
+}: EachBlogProps) => {
   const animateItem = useScrollFadeIn();
 
   return (
-    <div {...animateItem}>
-      <div>
-        <span>BLOG POSTS</span>
-      </div>
+    <div className="h-[240px] sm:h-[320px]" {...animateItem}>
+      <Link href={href} target="_blank" rel="noreferrer">
+        <div className="w-[300px] h-[120px] sm:w-[400px] sm:h-[160px] relative">
+          <Image src={imageSrc} alt={title} fill={true} />
+        </div>
+        <h3 className="mt-2 font-bold text-lg">{title}</h3>
+        <p className="text-sm">{createdDate}</p>
+        <p className="my-2">{description}</p>
+      </Link>
     </div>
   );
 };
