@@ -23,7 +23,7 @@ export const EachBlog = ({
 
   return (
     <div
-      className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] overflow-hidden"
+      className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] overflow-hidden m-4"
       {...animateItem}
     >
       <Link href={href} target="_blank" rel="noreferrer">
