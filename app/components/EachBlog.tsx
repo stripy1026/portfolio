@@ -22,7 +22,10 @@ export const EachBlog = ({
   const animateItem = useScrollFadeIn();
 
   return (
-    <div className="h-[240px] sm:h-[320px] overflow-hidden" {...animateItem}>
+    <div
+      className="w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] overflow-hidden"
+      {...animateItem}
+    >
       <Link href={href} target="_blank" rel="noreferrer">
         <div className="w-[300px] h-[120px] sm:w-[400px] sm:h-[160px] relative">
           <Image src={imageSrc} alt={title} fill={true} />
